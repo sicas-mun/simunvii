@@ -115,14 +115,16 @@
       'Fantasy UNSC': 'Discussing the Escalating Border Conflict Between Boravia and Jarhanpur and Its Implications for Regional and International Peace.'
     };
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const committeeName = btn.closest('.committee-card').querySelector('h2').textContent;
-        modalTitle.textContent = committeeName;
-        modalContent.textContent = agendas[committeeName];
-        overlay.style.display = 'flex';
-      });
-    });
+buttons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // prevents the page from jumping to top
+    const committeeName = btn.closest('.committee-card').querySelector('h2').textContent;
+    modalTitle.textContent = committeeName;
+    modalContent.textContent = agendas[committeeName];
+    overlay.style.display = 'flex';
+  });
+});
+
 
     closeBtn.addEventListener('click', () => {
       overlay.style.display = 'none';
