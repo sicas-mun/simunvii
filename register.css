@@ -153,6 +153,37 @@ header {
   text-decoration: none !important;
   transition: 0.3s;
 }
+/* Footer */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+  min-height: 250px;
+  position: relative;
+}
+
+footer .footer-info {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+footer .footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+footer iframe {
+  border: 0;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
