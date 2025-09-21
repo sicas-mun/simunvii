@@ -1,5 +1,5 @@
 /* === Fonts & Base === */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -8,9 +8,9 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #2c0e0e; /* dark maroon text for light areas */
-  background-color: #f8f3ed; /* light beige background */
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e; /* dark maroon */
+  background-color: #f8f3ed; /* creamish beige */
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -20,28 +20,29 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(44, 14, 14, 0.85); /* maroon glassy */
-  backdrop-filter: blur(10px);
+  background: rgba(44, 14, 14, 0.9); /* maroon glassy */
+  backdrop-filter: blur(12px);
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Logo container */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 8px; /* small space between logo and title */
+  gap: 10px;
 }
 
 .logo {
-  height: 32px;       /* smaller, elegant size */
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
@@ -49,26 +50,29 @@ header {
 .site-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #f5ede0; /* light beige */
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 .nav-links a {
   color: #f5ede0;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #d4b59c; /* softer beige */
+  transform: translateY(-2px);
 }
 
 /* === Hero Section with Parallax === */
@@ -81,54 +85,70 @@ header {
   align-items: center;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(44, 14, 14, 0.55); /* dark glass overlay */
-  backdrop-filter: blur(5px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(44, 14, 14, 0.6); /* darker maroon overlay */
+  backdrop-filter: blur(8px);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   color: #f5ede0;
-  max-width: 700px;
+  max-width: 800px;
+  padding: 20px;
 }
 
 .hero-content h2 {
-  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
 }
 
 /* === Sections === */
 .section {
-  padding: 80px 10%;
+  padding: 80px 5%;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
   color: #2c0e0e;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
 }
 
 .section h2::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 80px;
   height: 4px;
-  background: #6a1b1b;
+  background: #6a1b1b; /* maroon accent */
   margin: 10px auto;
   border-radius: 2px;
 }
@@ -136,30 +156,72 @@ header {
 .section p {
   color: #4a2a2a;
   max-width: 700px;
-  margin: auto;
+  margin: 0 auto 30px;
 }
 
-/* Alternate section background */
-#features {
-  background: #f1e8df; /* slightly darker beige */
+/* === Committee Grid === */
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.committee-card {
+  background: rgba(245, 237, 224, 0.9); /* beige glassy */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.committee-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.committee-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: #2c0e0e;
+  margin-bottom: 15px;
+}
+
+.committee-card p {
+  font-size: 1rem;
+  color: #4a2a2a;
+  margin-bottom: 15px;
 }
 
 /* === Buttons === */
 .btn {
   display: inline-block;
-  background: #6a1b1b;
+  background: #6a1b1b; /* maroon */
   color: #f5ede0;
   padding: 12px 25px;
-  border-radius: 30px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #8b2c2c;
+  background: #8b2c2c; /* lighter maroon */
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: rgba(44, 14, 14, 0.8); /* glassy maroon */
+  backdrop-filter: blur(5px);
+}
+
+/* === Features Section === */
+#features {
+  background: #f1e8df; /* slightly darker beige */
 }
 
 /* === Footer === */
@@ -167,8 +229,8 @@ footer {
   background: #2c0e0e;
   color: #f5ede0;
   text-align: center;
-  padding: 30px 10px;
-  margin-top: 40px;
+  padding: 40px 20px;
+  margin-top: 60px;
 }
 
 footer a {
@@ -184,7 +246,7 @@ footer a:hover {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -192,32 +254,47 @@ footer a:hover {
   }
 }
 
-.section {
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-}
-
-.section:nth-child(2) { animation-delay: 0.2s; }
-.section:nth-child(3) { animation-delay: 0.4s; }
-
 /* === Responsive === */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
+    gap: 20px;
+    padding: 15px;
   }
 
   .nav-links {
     flex-direction: column;
     gap: 15px;
+    text-align: center;
   }
 
   .hero-content h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 30px;
+  }
+
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
   }
 }
