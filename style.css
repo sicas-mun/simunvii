@@ -160,16 +160,16 @@ footer a:hover {
   }
 }
 
-/* === Hero Section === */
 .hero {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* push content lower in the middle */
+  align-items: center; /* center vertically */
   text-align: center;
   position: relative;
   background: url('images/school.png') center center / cover no-repeat fixed;
-  padding-bottom: 15%; /* space from bottom */
+  padding-top: 80px; /* space for header */
+  padding-bottom: 10%;
 }
 
 /* Dark overlay behind text */
@@ -177,7 +177,7 @@ footer a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35); /* subtle dark overlay */
+  background: rgba(0,0,0,0.35);
   z-index: 1;
 }
 
@@ -189,23 +189,25 @@ footer a:hover {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  transform: translateY(10%); /* push content slightly lower */
 }
 
 /* Main title: SIMUN VII */
 .hero h1 {
-  font-size: 6rem; /* very large */
+  font-size: 6rem;
   font-weight: 800;
-  color: #ffffff; /* bright white */
-  text-shadow: 2px 2px 12px rgba(0,0,0,0.7); /* subtle shadow for pop */
-  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+  margin: 0;
 }
 
 /* Dates */
 .hero .dates {
-  font-size: 1.3rem; /* small and subtle */
+  font-size: 1.3rem;
   font-weight: 500;
   color: #ffffff;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -221,8 +223,8 @@ footer a:hover {
 /* Register Button */
 .hero .btn {
   margin-top: 20px;
-  background: #6a1b1b; /* maroon */
-  color: #fdf8f2; /* bright cream text */
+  background: #6a1b1b;
+  color: #fdf8f2;
   padding: 14px 32px;
   border-radius: 40px;
   font-weight: 600;
@@ -232,32 +234,20 @@ footer a:hover {
 }
 
 .hero .btn:hover {
-  background: #8b2c2c; /* lighter maroon on hover */
+  background: #8b2c2c;
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 4rem;
-  }
-  .hero .dates {
-    font-size: 1.1rem;
-  }
-  .hero .quote {
-    font-size: 0.9rem;
-  }
+  .hero h1 { font-size: 4rem; }
+  .hero .dates { font-size: 1.1rem; }
+  .hero .quote { font-size: 0.9rem; }
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-  .hero .dates {
-    font-size: 0.9rem;
-  }
-  .hero .quote {
-    font-size: 0.8rem;
-  }
+  .hero h1 { font-size: 2.8rem; }
+  .hero .dates { font-size: 0.9rem; }
+  .hero .quote { font-size: 0.8rem; }
 }
