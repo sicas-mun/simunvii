@@ -147,130 +147,23 @@ header {
   flex-wrap: wrap;
 }
 
-/* Committees Section */
-.committee-list {
-  padding: 120px 5px 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.committee-card.large-card {
-  width: 100%;
-  max-width: 1000px;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.committee-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.committee-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.committee-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.committee-card h2 {
-  margin: 10px 0 5px;
-  color: #2c0e0e;
-  font-size: 1.5rem;
-}
-
-.committee-card p {
-  font-size: 1rem;
-  color: #4a2a2a;
-}
-
-.committee-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 15px;
-}
-
-.committee-card.large-card .committee-logo {
-  width: 80px;
-  height: 80px;
-}
-
-
-/* === Explore Agenda Button inside Committee Cards === */
-/* Explore Agenda Button inside Committee Cards */
-.committee-card .btn {
+.register-buttons a {
   display: inline-block;
-  background: #6a1b1b; /* red button */
+  background: #6a1b1b; /* maroon background */
   color: #fdf8f2;
   padding: 12px 28px;
   border-radius: 40px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
-  margin-top: 15px; /* spacing from description */
 }
 
-.committee-card .btn:hover {
-  background: #8b2c2c; /* darker red on hover */
+.register-buttons a:hover {
+  background: #8b2c2c; /* slightly darker on hover */
   transform: scale(1.05);
 }
 
 
-/* Optional: adjust spacing for large top card */
-.committee-card.large-card .btn {
-  font-size: 1.1rem;
-  padding: 14px 32px;
-  margin-top: 20px;
-}
-
-
-/* === Footer === */
-footer {
-  background: #2c0e0e;
-  color: #f5ede0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* keep map top-aligned */
-  padding: 20px 50px;
-  flex-wrap: wrap;
-  min-height: 250px; /* ensures footer is tall enough */
-  position: relative;
-}
-
-footer .footer-info {
-  max-width: 50%;
-  display: flex;
-  flex-direction: column;
-  margin-top: auto; /* pushes info to bottom */
-}
-
-footer .footer-info p {
-  margin: 5px 0;
-  font-size: 1rem;
-}
-
-footer iframe {
-  border: 0;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-}
 
 /* Responsive */
 @media (max-width: 1024px) {
