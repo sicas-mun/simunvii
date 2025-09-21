@@ -5,93 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Committees | SIMUN VII</title>
   <link rel="stylesheet" href="committees.css">
+  <style>
+    /* Popup overlay */
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+
+    /* Popup box with maroon border */
+    .popup-box {
+      background: #fff;
+      padding: 2rem;
+      max-width: 500px;
+      width: 90%;
+      border-radius: 15px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      border: 3px solid #6a1b1b;
+    }
+
+    .popup-box h2 {
+      margin-bottom: 15px;
+      color: #2c0e0e;
+    }
+
+    .popup-box p {
+      margin-bottom: 20px;
+      color: #4a2a2a;
+    }
+
+    /* Close button circular */
+    .popup-close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #6a1b1b;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .popup-close:hover {
+      background: #8b2c2c;
+    }
+
+    /* Red button similar to index.html */
+    .btn {
+      display: inline-block;
+      background: #6a1b1b;
+      color: #fdf8f2;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #8b2c2c;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-<nav class="navbar">
-  <div class="logo-container">
-    <a href="index.html">
-      <img src="images/sicas-logo.png" alt="SICAS Logo" class="logo">
-    </a>
-    <a href="index.html" class="site-title">SIMUN VII</a>
-  </div>
-  <ul class="nav-links">
-    <li>
-      <a href="https://www.instagram.com/simunvii._/" target="_blank">
-        <img src="images/instagram-logo.png" alt="Instagram" class="nav-ico">
-      </a>
-    </li>
-    <li><a href="committees.html" class="active">Committees</a></li>
-    <li><a href="studyguides.html">Study Guides</a></li>
-    <li><a href="register.html">Register Now</a></li>
-  </ul>
-</nav>
-
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="images/sicas-logo.png" alt="SICAS Logo" class="logo">
+        </a>
+        <a href="index.html" class="site-title">SIMUN VII</a>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="https://www.instagram.com/simunvii._/" target="_blank">
+            <img src="images/instagram-logo.png" alt="Instagram" class="nav-ico">
+          </a>
+        </li>
+        <li><a href="committees.html" class="active">Committees</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="register.html">Register Now</a></li>
+      </ul>
+    </nav>
   </header>
-
+<!-- Modal for agendas -->
+<div class="modal-overlay">
+  <div class="modal">
+    <span class="close-btn">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-content"></p>
+  </div>
+</div>
 
   <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Our Committees</h1>
-    <p>Explore the diverse committees that make SIMUN VII an unforgettable experience.</p>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Our Committees</h1>
+      <p>Explore the diverse committees that make SIMUN VII an unforgettable experience.</p>
+    </div>
+  </section>
 
   <!-- Committees Section -->
   <section class="committee-list">
-  <!-- Large Top Card -->
-  <div class="committee-card large-card">
-    <h2>Fantasy UNSC</h2>
-    <p>A fictional scenario committee simulating complex international relations and security issues.</p>
-    
-    <a href="#" class="btn">Explore Agenda</a>
+    <!-- Large Top Card -->
+    <div class="committee-card large-card">
+      <h2>Fantasy UNSC</h2>
+      <p>A fictional scenario committee simulating complex international relations and security issues.</p>
+      <a href="#" class="btn">Explore Agenda</a>
+    </div>
+
+    <!-- Grid of 6 smaller cards -->
+    <div class="committee-grid">
+      <div class="committee-card">
+        <h2>DISEC</h2>
+        <p>Focuses on international security, disarmament, and global peacekeeping challenges.</p>
+        <a href="#" class="btn">Explore Agenda</a>
+      </div>
+
+      <div class="committee-card">
+        <h2>Manhattan Engineer District</h2>
+        <p>A historical committee exploring the strategies of the Manhattan Project era.</p>
+        <a href="#" class="btn">Explore Agenda</a>
+      </div>
+
+      <div class="committee-card">
+        <h2>UNSC</h2>
+        <p>Responsible for addressing international peace and security matters at a global level.</p>
+        <a href="#" class="btn">Explore Agenda</a>
+      </div>
+
+      <div class="committee-card">
+        <h2>SOCHUM</h2>
+        <p>Deals with social, humanitarian, and cultural issues affecting global communities.</p>
+        <a href="#" class="btn">Explore Agenda</a>
+      </div>
+
+      <div class="committee-card">
+        <h2>PNA</h2>
+        <p>Focuses on national legislative matters and governance challenges in Pakistan.</p>
+        <a href="#" class="btn">Explore Agenda</a>
+      </div>
+
+      <div class="committee-card">
+        <h2>ADHOC</h2>
+        <p>A flexible, event-specific committee designed to tackle issues decided during the conference.</p>
+        <a href="#" class="btn">Explore Agenda</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup Overlay -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box" id="popupBox">
+      <span class="popup-close" id="popupClose">&times;</span>
+      <h2 id="popupTitle">Committee Name</h2>
+      <p id="popupContent">Agenda details go here...</p>
+    </div>
   </div>
-
-  <!-- Grid of 6 smaller cards -->
-  <div class="committee-grid">
-    <div class="committee-card">
-      <h2>DISEC</h2>
-      <p>Focuses on international security, disarmament, and global peacekeeping challenges.</p>
-      <a href="#" class="btn">Explore Agenda</a>
-    </div>
-
-    <div class="committee-card">
-
-      <h2>Manhattan Engineer District</h2>
-      <p>A historical committee exploring the strategies of the Manhattan Project era.</p>
-      <a href="#" class="btn">Explore Agenda</a>
-    </div>
-
-    <div class="committee-card">
-    
-      <h2>UNSC</h2>
-      <p>Responsible for addressing international peace and security matters at a global level.</p>
-      <a href="#" class="btn">Explore Agenda</a>
-    </div>
-
-    <div class="committee-card">
-      <h2>SOCHUM</h2>
-      <p>Deals with social, humanitarian, and cultural issues affecting global communities.</p>
-      <a href="#" class="btn">Explore Agenda</a>
-    </div>
-
-    <div class="committee-card">
-   
-      <h2>PNA</h2>
-      <p>Focuses on national legislative matters and governance challenges in Pakistan.</p>
-      <a href="#" class="btn">Explore Agenda</a>
-    </div>
-
-    <div class="committee-card">
-  
-      <h2>ADHOC</h2>
-      <p>A flexible, event-specific committee designed to tackle issues decided during the conference.</p>
-      <a href="#" class="btn">Explore Agenda</a>
-    </div>
-  </div>
-</section>
-
 
   <!-- Footer -->
   <footer>
@@ -100,7 +185,52 @@
       <p>Hosted at SICAS Liberty Campus, Lahore</p>
       <p>© 2025 SIMUN VII</p>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13605.600685320524!2d74.31897045076023!3d31.513167369253164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045e6a53688f%3A0xede2774b0019b449!2sSICAS%20Liberty%20Complex%20SLC!5e0!3m2!1sen!2s!4v1758469439883!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13605.600685320524!2d74.31897045076023!3d31.513167369253164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045e6a53688f%3A0xede2774b0019b449!2sSICAS%20Liberty%20Complex%20SLC!5e0!3m2!1sen!2s!4v1758469439883!5m2!1sen!2s" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </footer>
+
+  <script>
+    // Get all buttons
+    const buttons = document.querySelectorAll('.committee-card .btn');
+const overlay = document.querySelector('.modal-overlay');
+const modalTitle = document.getElementById('modal-title');
+const modalContent = document.getElementById('modal-content');
+const closeBtn = document.querySelector('.close-btn');
+
+const agendas = {
+  'ADHOC': 'Agenda to be revealed on spot.',
+  'DISEC': 'A. The Question of Nuclear Non-Proliferation: Implications of the U.S. Withdrawal from the JCPOA\nB. The Question of Preventing the Proliferation and Misuse of Biological Weapons in the 21st Century',
+  'Manhattan Engineer District': 'The Manhattan Project (1942 - 1946)',
+  'UNSC': 'The Situation in Afghanistan Post-Taliban Takeover: Security, governance, and humanitarian crisis management.',
+  'SOCHUM': 'Exploring the psychological impact of war and conflict on communities in post-conflict zones.',
+  'PNA': 'The Situation in Pakistan (2007): Investigating the Assassination of Former Prime Minister Benazir Bhutto and Its Implications for International Peace and Security.',
+  'Fantasy UNSC': 'Discussing the Escalating Border Conflict Between Boravia and Jarhanpur and Its Implications for Regional and International Peace.'
+};
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const committeeName = btn.previousElementSibling.previousElementSibling ? btn.previousElementSibling.previousElementSibling.textContent : btn.previousElementSibling.textContent;
+    modalTitle.textContent = committeeName;
+    modalContent.textContent = agendas[committeeName];
+    overlay.style.display = 'flex';
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+
+// Close modal if clicked outside of it
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) {
+    overlay.style.display = 'none';
+  }
+});
+
+  </script>
 </body>
 </html>
