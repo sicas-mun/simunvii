@@ -83,9 +83,8 @@ header {
   object-fit: contain;
 }
 
-/* Hamburger Menu */
 .hamburger {
-  display: none; /* hide on desktop */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -103,7 +102,6 @@ header {
   transition: all 0.3s;
 }
 
-/* Hamburger open animation */
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -307,12 +305,12 @@ footer a {
     gap: 15px;
     padding: 20px 0;
     background: rgba(44,14,14,0.95);
-    display: none; /* hidden by default on mobile */
+    display: none; /* hidden initially on mobile */
     z-index: 1400;
   }
 
   .nav-links.active {
-    display: flex; /* show when active */
+    display: flex; /* show when toggled */
   }
 
   .nav-links li {

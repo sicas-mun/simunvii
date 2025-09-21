@@ -72,6 +72,6 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active'); // toggle menu open/close
-  hamburger.classList.toggle('open'); // toggle animation
+  navLinks.classList.toggle('active'); // toggle menu visibility
+  hamburger.classList.toggle('open');  // animate hamburger
 });
