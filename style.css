@@ -1,153 +1,46 @@
-/* === Fonts & Base === */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #2c0e0e;
-  background-color: #f8f3ed;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* === Header & Navbar === */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(44,14,14,0.95);
-  backdrop-filter: blur(15px);
-  z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  border-bottom: 2px solid rgba(245,237,224,0.3);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo {
-  height: 32px;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
-}
-
-.site-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #f5ede0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.site-title::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 50%;
-  height: 2px;
-  background: #f5ede0;
-  opacity: 0.7;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: #f5ede0;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  position: relative;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #f5ede0;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.nav-links a:hover {
-  color: #d4b59c;
-  transform: translateY(-3px);
-}
-
-/* === Hero Section with Dynamic Layout === */
+/* === Hero Section Minimalist === */
 .hero {
   height: 100vh;
   background: url('images/school.png') no-repeat center center / cover;
-  background-attachment: fixed;
+  background-attachment: fixed; /* fixed background */
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+/* Remove blur overlay */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(44,14,14,0.55); /* glassy overlay */
-  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.25); /* subtle dark overlay for contrast */
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: left;
+  text-align: center;
   color: #f5ede0;
-  max-width: 900px;
+  max-width: 800px;
   padding: 20px;
   animation: fadeInUp 1.2s ease forwards;
 }
 
 .hero-content h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
+  font-size: 3rem; /* smaller, minimalist */
   font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .hero-content .dates {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #d4b59c;
   font-weight: 600;
   margin-bottom: 15px;
@@ -155,29 +48,26 @@ header {
 }
 
 .hero-content p {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  max-width: 650px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-content .quote {
   font-style: italic;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #f5ede0;
   margin-top: 10px;
-  max-width: 600px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   border-left: 3px solid #d4b59c;
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
-/* Hero Background Animation */
-@keyframes bgZoom {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.04); }
-  100% { transform: scale(1); }
-}
-
+/* Remove zoom effect, keep simple parallax */
 .hero::before {
   content: '';
   position: absolute;
@@ -185,99 +75,13 @@ header {
   background: inherit;
   background-size: cover;
   z-index: 0;
-  animation: bgZoom 15s ease-in-out infinite alternate;
 }
 
-/* === Sections === */
-.section {
-  padding: 100px 5%;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.8rem;
-  color: #2c0e0e;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.section h2::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 4px;
-  background: #6a1b1b;
-  margin: 15px auto;
-  border-radius: 2px;
-}
-
-.section p {
-  color: #4a2a2a;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  font-size: 1.2rem;
-}
-
-/* === Buttons === */
-.btn {
-  display: inline-block;
-  background: #6a1b1b;
-  color: #f5ede0;
-  padding: 14px 30px;
-  border-radius: 50px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-}
-
-.btn:hover {
-  background: #8b2c2c;
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
-}
-
-/* === Footer === */
-footer {
-  background: #2c0e0e;
-  color: #f5ede0;
-  text-align: center;
-  padding: 50px 20px;
-  margin-top: 80px;
-}
-
-footer p {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-footer a {
-  color: #d4b59c;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* === Animations === */
+/* Fade-in animation for hero */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -285,71 +89,27 @@ footer a:hover {
   }
 }
 
-/* === Responsive === */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .site-title {
-    font-size: 1.6rem;
-  }
-
-  .logo {
-    height: 30px;
-  }
-
   .hero-content h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
-
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-
-  .hero-content .quote {
-    font-size: 1.3rem;
-  }
-
   .hero-content .dates {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
-
-  .section h2 {
-    font-size: 2.2rem;
+  .hero-content p, .hero-content .quote {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .site-title {
-    font-size: 1.4rem;
-  }
-
-  .logo {
-    height: 28px;
-  }
-
   .hero-content h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-content .quote {
-    font-size: 1.1rem;
-  }
-
   .hero-content .dates {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+  .hero-content p, .hero-content .quote {
+    font-size: 0.9rem;
   }
 }
