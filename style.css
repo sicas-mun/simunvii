@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #2c0e0e; /* dark maroon */
-  background-color: #f8f3ed; /* light cream */
+  color: #2c0e0e;
+  background-color: #f8f3ed;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -20,11 +20,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(44, 14, 14, 0.95); /* rich maroon glass */
+  background: rgba(44,14,14,0.95);
   backdrop-filter: blur(15px);
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  border-bottom: 2px solid rgba(245, 237, 224, 0.3); /* subtle beige */
+  border-bottom: 2px solid rgba(245,237,224,0.3);
 }
 
 .navbar {
@@ -43,7 +43,7 @@ header {
 }
 
 .logo {
-  height: 32px; /* smaller for elegance */
+  height: 32px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
@@ -53,7 +53,7 @@ header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #f5ede0; /* cream */
+  color: #f5ede0;
   letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
@@ -102,11 +102,11 @@ header {
 }
 
 .nav-links a:hover {
-  color: #d4b59c; /* softer beige */
+  color: #d4b59c;
   transform: translateY(-3px);
 }
 
-/* === Hero Section with Parallax === */
+/* === Hero Section with Dynamic Layout === */
 .hero {
   height: 100vh;
   background: url('images/school.png') no-repeat center center / cover;
@@ -114,7 +114,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   position: relative;
   overflow: hidden;
 }
@@ -123,45 +122,59 @@ header {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(44,14,14,0.65);
-  backdrop-filter: blur(15px); /* stronger glass effect */
+  background: rgba(44,14,14,0.55); /* glassy overlay */
+  backdrop-filter: blur(12px);
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  text-align: left;
   color: #f5ede0;
   max-width: 900px;
-  padding: 30px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease forwards;
 }
 
 .hero-content h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   letter-spacing: 2px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero-content .dates {
+  font-size: 1.5rem;
+  color: #d4b59c;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .hero-content p {
   font-size: 1.4rem;
   margin-bottom: 20px;
+  max-width: 650px;
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .hero-content .quote {
   font-style: italic;
   font-size: 1.6rem;
-  color: #d4b59c;
-  margin-bottom: 20px;
+  color: #f5ede0;
+  margin-top: 10px;
+  max-width: 600px;
+  border-left: 3px solid #d4b59c;
+  padding-left: 15px;
 }
 
-/* === Hero Animation Zoom === */
+/* Hero Background Animation */
 @keyframes bgZoom {
   0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  50% { transform: scale(1.04); }
   100% { transform: scale(1); }
 }
 
@@ -204,7 +217,7 @@ header {
   display: block;
   width: 100px;
   height: 4px;
-  background: #6a1b1b; /* maroon accent */
+  background: #6a1b1b;
   margin: 15px auto;
   border-radius: 2px;
 }
@@ -237,16 +250,6 @@ header {
   box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
-.btn-secondary {
-  background: rgba(44,14,14,0.85);
-  backdrop-filter: blur(8px);
-}
-
-/* === Features Section === */
-#features {
-  background: #f1e8df;
-}
-
 /* === Footer === */
 footer {
   background: #2c0e0e;
@@ -268,6 +271,18 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* === Responsive === */
@@ -304,6 +319,10 @@ footer a:hover {
     font-size: 1.3rem;
   }
 
+  .hero-content .dates {
+    font-size: 1.2rem;
+  }
+
   .section h2 {
     font-size: 2.2rem;
   }
@@ -328,5 +347,9 @@ footer a:hover {
 
   .hero-content .quote {
     font-size: 1.1rem;
+  }
+
+  .hero-content .dates {
+    font-size: 1rem;
   }
 }
