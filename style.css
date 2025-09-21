@@ -33,21 +33,24 @@ header {
   padding: 15px 40px;
 }
 
+/* Logo container */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px; /* small space between logo and title */
 }
 
 .logo {
-  height: 55px;
+  height: 32px;       /* smaller, elegant size */
   width: auto;
+  object-fit: contain;
 }
 
-.logo-container h1 {
-  font-size: 1.8rem;
+.site-title {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #f5ede0; /* beige */
+  font-size: 1.6rem;
+  color: #f5ede0; /* light beige */
   letter-spacing: 1px;
 }
 
