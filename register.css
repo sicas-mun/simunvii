@@ -139,6 +139,13 @@ header {
   font-size: 1.2rem;
 }
 
+.register-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /* Committees Section */
 .committee-list {
