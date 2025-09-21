@@ -91,7 +91,7 @@ header {
 }
 
 .section p {
-  margin-bottom: 10px; /* reduce space below paragraph */
+  margin-bottom: 3px; /* reduce space below paragraph */
 }
 
 /* Add spacing above secondary buttons */
@@ -232,10 +232,6 @@ footer iframe {
 footer a {
   color: #d4b59c;
   text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 /* === Responsive === */
