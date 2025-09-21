@@ -98,6 +98,11 @@ header {
   .logo { height: 45px; }
 }
 
+.nav-ico {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
 
 /* Hero Section */
 .hero {
