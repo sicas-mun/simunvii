@@ -1,20 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@500&display=swap');
 
 :root {
-  --bg-dark: #160808;
-  --primary: #800000;
-  --secondary: #a83232;
-  --accent: #d4af37;
-  --text-light: #f8f8f8;
-  --muted: #cbbfbf;
+  --bg-dark: #160808;       /* deep maroon */
+  --primary: #800000;       /* royal maroon */
+  --secondary: #a83232;     /* lighter maroon */
+  --accent: #f5e6d3;        /* beige */
+  --muted: #d9c6b5;         /* soft beige */
 }
 
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: var(--bg-dark);
-  color: var(--text-light);
+  color: var(--accent);
   line-height: 1.7;
   scroll-behavior: smooth;
 }
@@ -26,29 +25,27 @@ body {
   align-items: center;
   padding: 1rem 5%;
   background: rgba(22, 8, 8, 0.95);
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid var(--muted);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 .navbar h1 {
-  font-family: 'Playfair Display', serif;
-  color: var(--accent);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   font-size: 1.6rem;
+  color: var(--accent);
 }
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
+.nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a {
   text-decoration: none;
-  color: var(--text-light);
+  color: var(--accent);
   transition: 0.3s;
+  font-weight: 500;
 }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover { color: var(--secondary); }
 
-/* Hero with Parallax */
+/* Hero with Parallax Glass */
 .hero {
   height: 100vh;
   background: url("school.png") center/cover no-repeat fixed;
@@ -62,7 +59,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(22, 8, 8, 0.7); /* dark overlay */
+  backdrop-filter: blur(4px) brightness(0.7); /* glassy effect */
+  background: rgba(22, 8, 8, 0.55);
 }
 .hero-content {
   position: relative;
@@ -70,13 +68,14 @@ body {
   animation: fadeIn 2s ease-out;
 }
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
   color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 .hero p {
   font-size: 1.2rem;
-  margin-top: 0.5rem;
+  color: var(--muted);
 }
 .scroll-down {
   display: inline-block;
@@ -86,6 +85,20 @@ body {
   animation: bounce 2s infinite;
 }
 
+/* Logo inside Hero */
+.school-logo {
+  width: 130px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border: 1px solid rgba(245, 230, 211, 0.3);
+  animation: floatLogo 4s ease-in-out infinite;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
 /* Sections */
 .section {
   padding: 5rem 10%;
@@ -93,11 +106,12 @@ body {
   background: #2a0f0f;
 }
 .section h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
   color: var(--accent);
   margin-bottom: 1rem;
 }
-.section p { color: var(--muted); }
+.section p { color: var(--muted); max-width: 700px; margin: auto; }
 
 /* Footer */
 footer {
@@ -105,6 +119,7 @@ footer {
   padding: 1.5rem;
   background: #0e0505;
   color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* Animations */
@@ -116,4 +131,8 @@ footer {
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
   40% { transform: translateY(10px); }
   60% { transform: translateY(5px); }
+}
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
 }
