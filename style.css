@@ -84,9 +84,9 @@ header {
 .section {
   padding: 40px 5%; /* reduced from 100px */
   text-align: center;
+}
 
-  /* Top spacing for Committees section */
-#committees {
+ #committees {
   padding-top: 120px; /* increase top padding */
 }
 
@@ -94,7 +94,7 @@ header {
 #studyguides {
   padding-bottom: 120px; /* increase bottom padding */
 }
-}
+
 
 
 .section h2 {
