@@ -1,4 +1,4 @@
-// Reveal sections on scroll
+// Simple scroll reveal
 const sections = document.querySelectorAll('.section');
 
 window.addEventListener('scroll', () => {
