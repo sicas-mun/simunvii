@@ -1,42 +1,135 @@
-@import url("style.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* Committee List */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdf8f2;
+  color: #2c0e0e;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* === Header === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.85);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #f5ede0;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5ede0;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #d4b59c;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  padding-top: 80px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.hero h1, .hero p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Committees Section */
 .committee-list {
-  padding: 100px 5%;
+  padding: 120px 5px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
 }
 
-/* Large top card */
 .committee-card.large-card {
   width: 100%;
   max-width: 1000px;
-  background: #ffffff;
+  background: #fff;
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.committee-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 15px;
-}
-
-/* Larger logo for top card */
-.committee-card.large-card .committee-logo {
-  width: 80px;
-  height: 80px;
-}
-
-/* Grid of 6 smaller cards */
 .committee-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -46,7 +139,7 @@
 }
 
 .committee-card {
-  background: #ffffff;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
@@ -70,28 +163,59 @@
   color: #4a2a2a;
 }
 
+.committee-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.committee-card.large-card .committee-logo {
+  width: 80px;
+  height: 80px;
+}
+
+/* Footer */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+}
+
+footer .footer-info {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+footer iframe {
+  border: 0;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
+
 /* Responsive */
+@media (max-width: 1024px) {
+  .nav-links { gap: 15px; }
+  .committee-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  footer { flex-direction: column; align-items: center; gap: 30px; }
+  footer .footer-info { max-width: 100%; }
+  footer iframe { width: 100%; height: 200px; }
+}
+
 @media (max-width: 768px) {
-  .committee-card.large-card {
-    padding: 1.5rem;
-  }
-
-  .committee-card h2 {
-    font-size: 1.3rem;
-  }
-
-  .committee-card p {
-    font-size: 0.95rem;
-  }
+  .hero h1 { font-size: 3rem; }
+  .hero p { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
-  .committee-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .committee-card.large-card {
-    padding: 1rem;
-  }
+  .committee-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 0.9rem; }
 }
