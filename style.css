@@ -95,13 +95,7 @@ header {
   padding-top: 60px; /* offset for header */
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35); /* dark overlay */
-  z-index: 1;
-}
+
 .hero h1,
 .hero .dates,
 .hero p {
