@@ -199,6 +199,35 @@ header {
   height: 80px;
 }
 
+
+/* === Explore Agenda Button inside Committee Cards === */
+.committee-card .btn {
+  display: inline-block;
+  background: #6a1b1b; /* same red as index page */
+  color: #fdf8f2;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 15px; /* space below description */
+  transition: all 0.3s ease;
+}
+
+.committee-card .btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Optional: adjust spacing for large top card */
+.committee-card.large-card .btn {
+  font-size: 1.1rem;
+  padding: 14px 32px;
+  margin-top: 20px;
+}
+
+
 /* === Footer === */
 footer {
   background: #2c0e0e;
