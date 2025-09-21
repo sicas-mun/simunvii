@@ -82,16 +82,17 @@ header {
 
 /* === Sections === */
 .section {
-  padding: 100px 5%;
+  padding: 40px 5%; /* reduced from 100px */
   text-align: center;
 }
+
 
 .section h2 {
   margin-bottom: 10px; /* reduce space below heading */
 }
 
 .section p {
-  margin-bottom: 3px; /* reduce space below paragraph */
+  margin-bottom: 10px; /* reduce space below paragraph */
 }
 
 /* Add spacing above secondary buttons */
