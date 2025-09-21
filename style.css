@@ -80,6 +80,12 @@ header {
   color: #d4b59c;
 }
 
+.nav-ico {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
 /* === Sections === */
 .section {
   padding: 40px 5%; /* reduced from 100px */
