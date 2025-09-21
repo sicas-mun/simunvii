@@ -251,3 +251,7 @@ footer a:hover {
   .hero .dates { font-size: 0.9rem; }
   .hero .quote { font-size: 0.8rem; }
 }
+/* Add spacing above secondary buttons */
+.btn-secondary {
+  margin-top: 15px; /* adjusts space from paragraph */
+}

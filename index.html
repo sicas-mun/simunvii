@@ -37,6 +37,6828 @@
   <!-- Committees Section -->
   <section id="committees" class="section">
     <h2>Our Committees</h2>
+<p>Explore a diverse range of committees designed to challenge and inspire.</p>
+<a href="committees.html" class="btn btn-secondary">Discover Committees</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="studyguides" class="section">
+You said:
+need to generate a website for SIMUN VII edition
+SICAS MUN
+header with study guides, committees, button to register now and home
+and a left header with sicas logo, ill give the image msyelf in github
+details which i can add
+and contact and location in footer
+give index.html, style.css and interactive script.js
+
+theme should be maroon and beige
+and tell me how to add images
+make it modern and mun-oriented
+ChatGPT said:
+
+Got it Ayesha! I’ll give you a clean, modern, maroon + beige MUN-themed website template with index.html, style.css, and script.js. It will have:
+
+Header (navigation bar) → Home, Study Guides, Committees, Register Now (highlighted).
+
+Left header/logo area → space where you can insert your SIMUN logo later.
+
+Main content → placeholders for details you can fill in (About, Committees, etc.).
+
+Footer → Contact info + Location.
+
+Theme → Maroon background highlights, beige base for sections.
+
+Responsive → works well on laptop + mobile.
+
+I’ll also explain how to add your logo and images.
+
+📄 index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII - SICAS Model United Nations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <!-- Replace "logo.png" with your own logo in the images folder -->
+      <img src="images/logo.png" alt="SIMUN Logo">
+      <h1>SIMUN VII</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#study-guides">Study Guides</a></li>
+        <li><a href="#committees">Committees</a></li>
+        <li><a href="#register" class="btn">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Welcome to SIMUN VII</h2>
+      <p>The 7th Edition of SICAS Model United Nations.</p>
+      <a href="#register" class="btn hero-btn">Join Now</a>
+    </div>
+  </section>
+
+  <!-- ===== STUDY GUIDES ===== -->
+  <section id="study-guides" class="content-section">
+    <h2>Study Guides</h2>
+    <p>Download the study guides for your committees here.</p>
+    <div class="guides">
+      <a href="#">UNSC Guide</a>
+      <a href="#">DISEC Guide</a>
+      <a href="#">SOCHUM Guide</a>
+      <!-- Add more as needed -->
+    </div>
+  </section>
+
+  <!-- ===== COMMITTEES ===== -->
+  <section id="committees" class="content-section">
+    <h2>Committees</h2>
+    <p>Explore the committees of SIMUN VII.</p>
+    <div class="committees">
+      <div class="committee-card">United Nations Security Council</div>
+      <div class="committee-card">Disarmament and International Security</div>
+      <div class="committee-card">Social, Humanitarian and Cultural</div>
+      <!-- Add more committees -->
+    </div>
+  </section>
+
+  <!-- ===== REGISTER ===== -->
+  <section id="register" class="content-section register">
+    <h2>Register Now</h2>
+    <p>Be part of the most exciting MUN experience of the year.</p>
+    <a href="https://forms.gle/" target="_blank" class="btn">Register Here</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Contact us: simun@sicas.edu.pk | +92-300-1234567</p>
+    <p>Location: SICAS, Lahore, Pakistan</p>
+    <p>&copy; 2025 SIMUN VII</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+🎨 style.css
+/* === Root Colors === */
+:root {
+  --maroon: #800000;
+  --beige: #f5f0e6;
+  --text-dark: #222;
+  --text-light: #fff;
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--maroon);
+  padding: 1rem 2rem;
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--beige);
+}
+
+nav ul li a.btn {
+  background: var(--beige);
+  color: var(--maroon);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+nav ul li a.btn:hover {
+  background: #e6dfd2;
+}
+
+/* === Hero === */
+.hero {
+  background: url("images/mun-background.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+}
+
+.hero-text p {
+  margin: 1rem 0;
+}
+
+.hero-btn {
+  background: var(--maroon);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background: #5c0000;
+}
+
+/* === Content Sections === */
+.content-section {
+  padding: 3rem 2rem;
+  background: var(--beige);
+  text-align: center;
+}
+
+.content-section h2 {
+  color: var(--maroon);
+  margin-bottom: 1rem;
+}
+
+.guides a {
+  display: block;
+  margin: 0.5rem 0;
+  color: var(--maroon);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.committees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.committee-card {
+  background: var(--maroon);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  min-width: 200px;
+  transition: transform 0.3s;
+}
+
+.committee-card:hover {
+  transform: translateY(-5px);
+}
+
+/* === Register Section === */
+.register a.btn {
+  background: var(--maroon);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.register a.btn:hover {
+  background: #5c0000;
+}
+
+/* === Footer === */
+footer {
+  background: var(--maroon);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+⚡ script.js
+// Highlight active section in navbar on scroll
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+🖼️ How to Add Images
+
+Create a folder inside your project called images.
+
+Place your logo as logo.png inside images/.
+
+Replace the placeholder background in hero section with your own (for example images/sicas-campus.jpg).
+
+.hero {
+  background: url("images/sicas-campus.jpg") center/cover no-repeat;
+}
+
+
+You can also add committee logos or photos inside <img> tags in the committees section.
+
+Do you want me to also create a polished Committees page (separate HTML file) where each committee has its own image, agenda, and chair info, or keep everything in one-page scroll style?
+
+You said:
+index.html
+committees.html
+studyguides.html
+register.html
+style.css (for index)
+committees.css
+studyguides.css
+register.css
+
+And js for all too
+
+pls give codes
+
+ChatGPT said:
+
+Perfect — so you want a multi-page SIMUN website (index + committees + study guides + register), each with its own CSS and JS file. I’ll give you base templates for all of them. You can then add content/images later.
+
+The design keeps maroon and beige theme, consistent nav bar and footer across pages.
+
+📄 index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="SIMUN Logo">
+      <h1>SIMUN VII</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="register.html" class="btn">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to SIMUN VII</h2>
+      <p>The 7th Edition of SICAS Model United Nations.</p>
+      <a href="register.html" class="btn hero-btn">Join Now</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="content-section">
+    <h2>About SIMUN</h2>
+    <p>SICAS Model United Nations brings together delegates from across the country for debate, diplomacy, and leadership.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Contact us: simun@sicas.edu.pk | +92-300-1234567</p>
+    <p>Location: SICAS, Lahore, Pakistan</p>
+    <p>&copy; 2025 SIMUN VII</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+📄 committees.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII - Committees</title>
+  <link rel="stylesheet" href="committees.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="SIMUN Logo">
+      <h1>SIMUN VII</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="committees.html" class="active">Committees</a></li>
+        <li><a href="register.html" class="btn">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-section">
+    <h2>Committees</h2>
+    <div class="committees">
+      <div class="committee-card">United Nations Security Council</div>
+      <div class="committee-card">Disarmament and International Security</div>
+      <div class="committee-card">Social, Humanitarian and Cultural</div>
+      <div class="committee-card">World Health Organization</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Contact us: simun@sicas.edu.pk | +92-300-1234567</p>
+    <p>Location: SICAS, Lahore, Pakistan</p>
+    <p>&copy; 2025 SIMUN VII</p>
+  </footer>
+
+  <script src="committees.js"></script>
+</body>
+</html>
+
+📄 studyguides.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII - Study Guides</title>
+  <link rel="stylesheet" href="studyguides.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="SIMUN Logo">
+      <h1>SIMUN VII</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="studyguides.html" class="active">Study Guides</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="register.html" class="btn">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-section">
+    <h2>Study Guides</h2>
+    <p>Download the study guides for your committees below.</p>
+    <ul class="guides">
+      <li><a href="#">UNSC Study Guide</a></li>
+      <li><a href="#">DISEC Study Guide</a></li>
+      <li><a href="#">SOCHUM Study Guide</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Contact us: simun@sicas.edu.pk | +92-300-1234567</p>
+    <p>Location: SICAS, Lahore, Pakistan</p>
+    <p>&copy; 2025 SIMUN VII</p>
+  </footer>
+
+  <script src="studyguides.js"></script>
+</body>
+</html>
+
+📄 register.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII - Register</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="SIMUN Logo">
+      <h1>SIMUN VII</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="register.html" class="active btn">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-section">
+    <h2>Register for SIMUN VII</h2>
+    <p>Be part of the most exciting MUN experience of the year.</p>
+    <a href="https://forms.gle/" target="_blank" class="btn">Register Here</a>
+  </section>
+
+  <footer>
+    <p>Contact us: simun@sicas.edu.pk | +92-300-1234567</p>
+    <p>Location: SICAS, Lahore, Pakistan</p>
+    <p>&copy; 2025 SIMUN VII</p>
+  </footer>
+
+  <script src="register.js"></script>
+</body>
+</html>
+
+🎨 CSS (example for style.css, copy + adjust for others)
+:root {
+  --maroon: #800000;
+  --beige: #f5f0e6;
+  --text-light: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--maroon);
+  padding: 1rem 2rem;
+  color: var(--text-light);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--beige);
+}
+
+nav ul li a.btn {
+  background: var(--beige);
+  color: var(--maroon);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  background: url("images/mun-background.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+/* Content */
+.content-section {
+  padding: 3rem 2rem;
+  background: var(--beige);
+  text-align: center;
+}
+
+.content-section h2 {
+  color: var(--maroon);
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--maroon);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+
+For committees.css, studyguides.css, register.css → copy this style and adjust sections (for committees add .committee-card styles, for studyguides style <ul>, etc.).
+
+⚡ JS (example, reuse pattern)
+script.js
+console.log("Home page loaded");
+
+committees.js
+console.log("Committees page loaded");
+
+studyguides.js
+console.log("Study Guides page loaded");
+
+register.js
+console.log("Register page loaded");
+
+
+👉 Place your logo in /images/logo.png. Replace "images/mun-background.jpg" with your own background.
+
+Do you want me to also add a responsive hamburger menu for mobile view so the nav works neatly on phones?
+
+You said:
+give interactive js
+and give a mobuile friendly too
+ChatGPT said:
+
+Got it ✅ — let’s make this interactive + mobile-friendly.
+I’ll give you JavaScript that:
+
+Adds a hamburger menu for small screens.
+
+Highlights the active nav link when you scroll (on index.html).
+
+Adds smooth scroll animation between sections.
+
+Works across all 4 pages.
+
+🔹 Update HTML Headers (all pages)
+
+Inside <header> after <nav>, add a hamburger button:
+
+<button class="menu-toggle">&#9776;</button>
+
+
+So your index.html header becomes:
+
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="SIMUN Logo">
+    <h1>SIMUN VII</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="studyguides.html">Study Guides</a></li>
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="register.html" class="btn">Register Now</a></li>
+    </ul>
+  </nav>
+  <button class="menu-toggle">&#9776;</button>
+</header>
+
+
+(Same for committees.html, studyguides.html, register.html.)
+
+🔹 Responsive CSS (add to each CSS file)
+/* === Mobile Friendly === */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--maroon);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+This hides the menu on mobile and shows a hamburger. When tapped, the menu slides down.
+
+🔹 JavaScript
+script.js (for index.html)
+// === Mobile Menu Toggle ===
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+// === Active Link Highlight on Scroll (only for index.html) ===
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// === Smooth Scroll ===
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+committees.js
+// Mobile Menu Toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+console.log("Committees page ready");
+
+studyguides.js
+// Mobile Menu Toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+console.log("Study Guides page ready");
+
+register.js
+// Mobile Menu Toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+console.log("Register page ready");
+
+
+✅ Now:
+
+On desktop, the nav bar looks normal.
+
+On mobile, you’ll see a hamburger ☰. Clicking it expands/collapses the nav links.
+
+On index.html, scrolling updates the active nav link + smooth scroll effect.
+
+Do you also want me to make the committees page interactive (e.g., when you click a committee card it expands with agenda + chairs info)?
+
+You said:
+give whole css
+ChatGPT said:
+
+Alright Ayesha, here’s the complete CSS for all 4 pages.
+They share a common maroon + beige theme, with slight differences for committees, study guides, and register pages.
+
+🎨 style.css (Home Page)
+:root {
+  --maroon: #800000;
+  --beige: #f5f0e6;
+  --text-light: #fff;
+  --text-dark: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--beige);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--maroon);
+  padding: 1rem 2rem;
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--beige);
+}
+
+nav ul li a.btn {
+  background: var(--beige);
+  color: var(--maroon);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+nav ul li a.btn:hover {
+  background: #e6dfd2;
+}
+
+/* ===== HAMBURGER ===== */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: url("images/mun-background.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.hero-btn {
+  background: var(--maroon);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background: #5c0000;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.content-section {
+  padding: 3rem 2rem;
+  background: var(--beige);
+  text-align: center;
+}
+
+.content-section h2 {
+  color: var(--maroon);
+  margin-bottom: 1rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--maroon);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--maroon);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+🎨 committees.css
+@import url("style.css");
+
+.committees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.committee-card {
+  background: var(--maroon);
+  color: var(--text-light);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.committee-card:hover {
+  transform: translateY(-5px);
+  background: #5c0000;
+}
+
+🎨 studyguides.css
+@import url("style.css");
+
+.guides {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.guides li {
+  margin: 0.5rem 0;
+}
+
+.guides li a {
+  color: var(--maroon);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.guides li a:hover {
+  color: #5c0000;
+}
+
+🎨 register.css
+@import url("style.css");
+
+.content-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.content-section p {
+  margin: 1rem 0 2rem;
+}
+
+.content-section a.btn {
+  background: var(--maroon);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.content-section a.btn:hover {
+  background: #5c0000;
+}
+
+
+✅ With this setup:
+
+All pages share the same header/footer design from style.css.
+
+Each page’s CSS file imports style.css and adds its own styles.
+
+Mobile friendly with hamburger nav included.
+
+Committees have interactive hover, study guides look neat, register has styled button.
+
+Do you want me to also make committee cards expandable on click (so agendas + chairs info show when a user clicks)? That would make the Committees page more interactive.
+
+You said:
+give other htmls than index html
+ChatGPT said:
+
+Perfect — let’s build out the rest of your pages (committees.html, studyguides.html, and register.html). Each one will share the same header, footer, and theme as index.html, so your website feels consistent. You can link their unique CSS files (committees.css, studyguides.css, register.css) for styling.
+
+committees.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Committees | SIMUN VII</title>
+  <link rel="stylesheet" href="committees.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/sicas-logo.png" alt="SICAS Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="committees.html" class="active">Committees</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="register.html">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Committees Content -->
+  <main>
+    <section class="hero">
+      <h1>Our Committees</h1>
+      <p>Explore the diverse committees that make SIMUN VII an unforgettable experience.</p>
+    </section>
+
+    <section class="committee-list">
+      <div class="committee-card">
+        <h2>UNHRC</h2>
+        <p>United Nations Human Rights Council tackling global human rights concerns.</p>
+      </div>
+      <div class="committee-card">
+        <h2>DISEC</h2>
+        <p>Disarmament and International Security Committee addressing global peace issues.</p>
+      </div>
+      <div class="committee-card">
+        <h2>UNSC</h2>
+        <p>Security Council ensuring international peace and security.</p>
+      </div>
+      <div class="committee-card">
+        <h2>WHO</h2>
+        <p>World Health Organization working on global health challenges.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | SICAS Model United Nations</p>
+    <p>Contact: <a href="mailto:simun@sicas.edu.pk">simun@sicas.edu.pk</a> | Location: SICAS Lahore</p>
+  </footer>
+</body>
+</html>
+
+studyguides.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Guides | SIMUN VII</title>
+  <link rel="stylesheet" href="studyguides.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/sicas-logo.png" alt="SICAS Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="studyguides.html" class="active">Study Guides</a></li>
+        <li><a href="register.html">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Study Guides -->
+  <main>
+    <section class="hero">
+      <h1>Study Guides</h1>
+      <p>Download detailed study guides to prepare for debates and resolutions.</p>
+    </section>
+
+    <section class="guides">
+      <div class="guide-card">
+        <h2>UNHRC</h2>
+        <a href="guides/UNHRC.pdf" target="_blank">Download Guide</a>
+      </div>
+      <div class="guide-card">
+        <h2>DISEC</h2>
+        <a href="guides/DISEC.pdf" target="_blank">Download Guide</a>
+      </div>
+      <div class="guide-card">
+        <h2>UNSC</h2>
+        <a href="guides/UNSC.pdf" target="_blank">Download Guide</a>
+      </div>
+      <div class="guide-card">
+        <h2>WHO</h2>
+        <a href="guides/WHO.pdf" target="_blank">Download Guide</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | SICAS Model United Nations</p>
+    <p>Contact: <a href="mailto:simun@sicas.edu.pk">simun@sicas.edu.pk</a> | Location: SICAS Lahore</p>
+  </footer>
+</body>
+</html>
+
+register.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | SIMUN VII</title>
+  <link rel="stylesheet" href="register.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/sicas-logo.png" alt="SICAS Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="register.html" class="active">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Registration Form -->
+  <main>
+    <section class="hero">
+      <h1>Register for SIMUN VII</h1>
+      <p>Join one of Pakistan’s leading Model UN conferences.</p>
+    </section>
+
+    <section class="form-section">
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="institution">Institution</label>
+        <input type="text" name="institution" id="institution" required>
+
+        <label for="committee">Preferred Committee</label>
+        <select name="committee" id="committee">
+          <option value="unhrc">UNHRC</option>
+          <option value="disec">DISEC</option>
+          <option value="unsc">UNSC</option>
+          <option value="who">WHO</option>
+        </select>
+
+        <button type="submit" class="btn">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | SICAS Model United Nations</p>
+    <p>Contact: <a href="mailto:simun@sicas.edu.pk">simun@sicas.edu.pk</a> | Location: SICAS Lahore</p>
+  </footer>
+</body>
+</html>
+
+
+✅ All these link back to script.js for interactivity (menu toggle, scroll effects).
+✅ You just need to add separate CSS files (committees.css, studyguides.css, register.css) — I can generate those too in the same style as style.css.
+
+Do you want me to make all three CSS files now (with maroon–beige theme, mobile friendly cards, buttons, forms)?
+
+You said:
+how to add logo
+ChatGPT said:
+
+Here’s how you can add your SICAS logo to the site:
+
+1. Place your logo file
+
+Save your logo (for example sicas-logo.png) inside a folder called images in your project.
+
+Your folder structure will look like this:
+
+/SIMUN
+   ├── index.html
+   ├── committees.html
+   ├── studyguides.html
+   ├── register.html
+   ├── style.css
+   ├── committees.css
+   ├── studyguides.css
+   ├── register.css
+   ├── script.js
+   └── images/
+         └── sicas-logo.png
+
+2. Add logo in HTML
+
+Inside the <header> you already have this block:
+
+<div class="logo">
+  <img src="images/sicas-logo.png" alt="SICAS Logo">
+</div>
+
+3. Style it in CSS
+
+In your style.css (and you can copy into the other CSS files too if you want the same look):
+
+.logo img {
+  height: 60px;     /* adjust logo size */
+  width: auto;      /* keep aspect ratio */
+  margin-right: 1rem;
+}
+
+4. Make it link back to Home
+
+If you want clicking the logo to return to the homepage:
+
+<div class="logo">
+  <a href="index.html">
+    <img src="images/sicas-logo.png" alt="SICAS Logo">
+  </a>
+</div>
+
+
+👉 Once you upload your image to the images folder and make sure the filename in src="images/sicas-logo.png" matches exactly, it will show.
+
+Do you want me to also make a favicon (small logo in browser tab) for SIMUN VII?
+
+You said:
+PS C:\Users\s\Documents\SIMUNVII\simunvii> git push origin main
+remote: {"auth_status":"access_denied_to_user","body":"Permission to sicas-mun/simunvii.git denied to ascendia-app."}
+fatal: unable to access 'https://github.com/sicas-mun/simunvii/': The requested URL returned error: 403
+PS C:\Users\s\Documents\SIMUNVII\simunvii>
+PS C:\Users\s\Documents\SIMUNVII\simunvii>
+ChatGPT said:
+
+That error means your local Git is trying to push with the wrong GitHub account (ascendia-app), and it doesn’t have permission to the sicas-mun/simunvii repository.
+
+Here’s how you can fix it step by step:
+
+1. Check which remote you’re pushing to
+
+Run:
+
+git remote -v
+
+
+You’ll see something like:
+
+origin  https://github.com/sicas-mun/simunvii.git (fetch)
+origin  https://github.com/sicas-mun/simunvii.git (push)
+
+2. Log in with the correct GitHub account
+
+Since ascendia-app doesn’t have access, you need to push using your GitHub account that has permission to sicas-mun.
+
+First clear stored credentials (Windows):
+
+git credential-manager erase
+
+
+Or manually:
+Go to Windows Credential Manager → Windows Credentials → remove any entries for github.com.
+
+Next time you push, Git will ask for credentials again.
+
+3. Use a Personal Access Token (PAT)
+
+GitHub no longer accepts passwords. You’ll need a token:
+
+Go to GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens.
+
+Generate a new token with permissions for the repo.
+
+When Git asks for your username, enter your GitHub username.
+
+For password, paste the token.
+
+4. If you want to switch accounts
+
+If you want to push with SSH instead (safer):
+
+git remote set-url origin git@github.com:sicas-mun/simunvii.git
+
+
+Then set up an SSH key with the GitHub account that has repo access.
+
+✅ After this, run:
+
+git add .
+git commit -m "Initial website files"
+git push origin main
+
+
+Do you want me to give you the simplest method just for one repo (using HTTPS + token), or a permanent fix so you can easily push with multiple accounts (like sicas-mun + ascendia-app) on the same PC?
+
+You said:
+how to logout of git 
+ChatGPT said:
+
+Good question — in Git you don’t exactly log in/out like a website, but you can clear stored credentials and switch accounts. Here’s how to “log out” depending on what you’re using:
+
+🔹 1. If you used HTTPS (username + token)
+
+Git stores your login in Windows Credential Manager.
+
+Open Control Panel → User Accounts → Credential Manager → Windows Credentials.
+
+Look for an entry like:
+
+git:https://github.com
+
+
+Click it → Remove.
+
+Now when you git push again, Git will ask for your GitHub username and token.
+
+🔹 2. If you used SSH
+
+If your repo is set up with SSH, Git uses your local SSH keys. To “log out,” you would:
+
+Remove or rename the SSH key in C:\Users\<YourUser>\.ssh\id_rsa (or whichever key is in use).
+
+Or stop the ssh-agent from using it:
+
+ssh-add -D
+
+🔹 3. Command to erase credentials (Windows)
+
+You can also run:
+
+git credential-manager erase
+
+
+or more specifically:
+
+git credential-manager erase https://github.com
+
+🔹 4. To check who you’re logged in as
+git config --get user.name
+git config --get user.email
+
+
+This shows the Git identity for commits (not authentication).
+Authentication is handled separately by Credential Manager or SSH keys.
+
+👉 Do you want me to give you a step-by-step fix to switch your Git to the correct GitHub account (sicas-mun) so you can push right away?
+
+You said:
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/sicas-mun/simunvii'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\s\Documents\SIMUNVII\simunvii> 
+ChatGPT said:
+
+Got it ✅ That error means:
+
+The remote branch main has commits that your local branch doesn’t.
+
+Git refuses to push, because it would overwrite those changes.
+
+You have 2 main options:
+
+🔹 Option 1: Pull first, then push (safe way)
+
+This merges the remote changes into your local branch.
+
+git pull origin main --rebase
+git push origin main
+
+
+--rebase keeps history cleaner (applies your commits on top of remote ones).
+
+If there are conflicts, Git will stop and let you resolve them. After fixing conflicts:
+
+git add .
+git rebase --continue
+git push origin main
+
+🔹 Option 2: Force push (overwrite remote)
+
+⚠️ This deletes remote changes and replaces them with your local branch. Only do this if you want to completely overwrite GitHub’s branch.
+
+git push origin main --force
+
+
+👉 Usually, Option 1 (pull + rebase + push) is the right choice so you don’t lose work.
+
+Do you want me to walk you through pulling safely with rebase step by step (including conflict resolution), or do you just want to overwrite GitHub with your local version?
+
+You said:
+logo is not appearing
+ChatGPT said:
+
+Let’s debug your logo issue step by step. Here are the most common reasons a logo doesn’t appear:
+
+✅ 1. Check folder structure
+
+Your HTML expects:
+
+<img src="images/sicas-logo.png" alt="SICAS Logo">
+
+
+So your folder must look like:
+
+simunvii/
+ ├── index.html
+ ├── committees.html
+ ├── studyguides.html
+ ├── register.html
+ ├── style.css
+ ├── ...
+ └── images/
+      └── sicas-logo.png
+
+
+Make sure the images folder is in the same place as your HTML files.
+
+✅ 2. Check filename
+
+Filenames are case-sensitive in GitHub Pages and Linux servers.
+
+If your file is called SICAS-Logo.PNG, the code won’t find sicas-logo.png.
+
+Fix by renaming it exactly: sicas-logo.png.
+
+✅ 3. Try relative vs absolute path
+
+If the images folder is inside the same directory as index.html, this works:
+
+<img src="images/sicas-logo.png" alt="SICAS Logo">
+
+
+If you accidentally placed the image one folder higher:
+
+<img src="../images/sicas-logo.png" alt="SICAS Logo">
+
+✅ 4. Test by opening directly
+
+Open your browser and type the file path (like file:///C:/Users/s/Documents/SIMUNVII/simunvii/images/sicas-logo.png).
+
+If it doesn’t load, the file is not where you think it is.
+
+✅ 5. CSS might be hiding it
+
+Check if you have CSS like this:
+
+.logo img {
+  display: none;
+}
+
+
+or dimensions set to 0px. In your style.css, try:
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+
+👉 Can you tell me the exact filename of your logo file and where it is located in your project? That way I can give you the exact <img src="..."> path that will work.
+
+You said:
+now make the css darker and more elegant and better fonts mroe dynamic, royal
+ChatGPT said:
+
+Perfect, Ayesha — let’s give your SIMUN site a more royal, elegant vibe. Since your theme is maroon and beige, I’ll darken the maroon, add beige-gold highlights, introduce a serif font for headings (classical, formal) and a clean sans-serif font for body text. I’ll also add smooth transitions, hover effects, and subtle shadows for a dynamic but professional MUN look.
+
+Here’s the upgraded style.css (you can copy the same style into committees.css, studyguides.css, and register.css to keep everything consistent):
+
+🎨 style.css (Dark Royal Theme)
+/* ===== Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --primary: #5a0f1d;       /* deep maroon */
+  --secondary: #f5f0e6;     /* soft beige */
+  --accent: #c9a66b;        /* gold accent */
+  --text-dark: #1e1e1e;
+  --text-light: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--secondary);
+  color: var(--text-dark);
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: var(--text-light);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .logo img {
+  height: 65px;
+  width: auto;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 1.05rem;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--accent);
+}
+
+/* ===== Hero Sections ===== */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(rgba(90,15,29,0.85), rgba(90,15,29,0.85)),
+              url('images/mun-bg.jpg') center/cover no-repeat;
+  color: var(--secondary);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* ===== Cards (Committees, Guides, etc.) ===== */
+.committee-list, .guides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.committee-card, .guide-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.committee-card:hover, .guide-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.committee-card h2, .guide-card h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+.committee-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.guide-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: var(--text-light);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.guide-card a:hover {
+  background: var(--accent);
+  color: var(--text-dark);
+}
+
+/* ===== Form (Register Page) ===== */
+form {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form .btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+form .btn:hover {
+  background: var(--accent);
+  color: var(--text-dark);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--primary);
+  color: var(--text-light);
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+}
+
+
+✨ Changes Made:
+
+Added Playfair Display (serif, elegant) for headings.
+
+Darkened maroon (#5a0f1d), added gold accent (#c9a66b).
+
+Hero section has a background overlay (you can add an image mun-bg.jpg).
+
+Cards and buttons have hover animations with shadows.
+
+Footer styled like a formal seal.
+
+Mobile nav toggle support (script.js already handles this).
+
+Would you like me to also customize each page’s CSS separately (committees.css, studyguides.css, register.css) so they each have slightly different touches, or should I just make them all reuse this same elegant style.css for consistency?
+
+You said:
+its really basic and light pale
+make it dark, royal, dynamic, and animated
+all of it
+ChatGPT said:
+
+Got it — you want a royal, dynamic, animated dark theme for your MUN site that feels elegant and prestigious. I’ll redesign your entire CSS into a dark royal purple/navy palette with gold accents, smoother animations, and more dynamic fonts.
+
+Here’s the upgraded style.css (and you can apply the same theme to committees.css, studyguides.css, and register.css — just adjust section-specific layouts if needed):
+
+/* ===== Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --bg-dark: #0d0b1a;
+  --bg-card: #1a1630;
+  --primary: #4a2fbd;
+  --secondary: #6b4eff;
+  --accent: #d4af37; /* Gold */
+  --text-light: #f5f5f5;
+  --text-muted: #aaa;
+  --transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(13, 11, 26,
+
+You said:
+no i want a marooon palette
+ChatGPT said:
+
+Perfect, maroon will give it a royal, prestigious vibe. Let’s do a dark maroon palette with gold accents and make it elegant but dynamic with animations.
+
+Here’s the upgraded style.css with maroon tones (you can copy it to committees.css, studyguides.css, and register.css too):
+
+/* ===== Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --bg-dark: #1a0a0a;        /* Deep dark maroon */
+  --bg-card: #2a0f0f;        /* Card/section maroon */
+  --primary: #800000;        /* Royal maroon */
+  --secondary: #a83232;      /* Lighter maroon/red */
+  --accent: #d4af37;         /* Gold */
+  --text-light: #f8f8f8;     /* White-ish */
+  --text-muted: #bdaaaa;     /* Muted beige */
+  --transition: all 0.4s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(26, 10, 10, 0.95);
+  border-bottom: 1px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+
+.navbar h1:hover {
+  color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 
+
+You said:
+and a dynamic glass image of sicas school
+called
+school.png
+
+something cool and dynamic and modern
+ChatGPT said:
+
+Got it ✅ You want your school.png (the SICAS school logo/image) to look dynamic, modern, and glass-like on the site — not just a flat image.
+
+Here’s how you can style it with a glassmorphism effect, animations, and hover dynamics:
+
+HTML (example for logo in index.html):
+<header class="hero">
+  <div class="hero-overlay">
+    <img src="school.png" alt="SICAS School Logo" class="school-logo">
+    <h1>SIMUN VII</h1>
+    <p>Shaping Diplomats of Tomorrow</p>
+  </div>
+</header>
+
+CSS (add to your maroon theme CSS):
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(26, 10, 10, 0.8), rgba(26, 10, 10, 0.9)),
+              url("school.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background: rgba(255, 255, 255, 0.
+
+You said:
+like a parallax effect smth
+and scroll down to find more about committes and more fertures
+ChatGPT said:
+
+Perfect — let’s give you a parallax hero with your school.png as the background, plus a scroll-down reveal into committees and other features. This will feel modern, dynamic, and elegant.
+
+Here’s a full working setup for your index.html with parallax + smooth scroll:
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>SIMUN VII</h1>
+    <ul class="nav-links">
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="studyguides.html">Study Guides</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Parallax -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to SIMUN VII</h1>
+      <p>Hosted at SICAS School</p>
+      <a href="#committees" class="scroll-down">↓ Explore More</a>
+    </div>
+  </header>
+
+  <!-- Committees Preview -->
+  <section id="committees" class="section">
+    <h2>Committees</h2>
+    <p>Engage in thought-provoking debates with diverse committees designed to challenge your diplomatic skills.</p>
+    <a href="committees.html" class="btn">View Committees</a>
+  </section>
+
+  <!-- Features Preview -->
+  <section id="features" class="section">
+    <h2>Conference Features</h2>
+    <p>From engaging study guides to networking opportunities, SIMUN VII ensures a memorable experience.</p>
+    <a href="studyguides.html" class="btn">Explore Study Guides</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | SICAS School</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+style.css (parallax + maroon royal theme + animations)
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --bg-dark: #1a0a0a;
+  --bg-card: #2a0f0f;
+  --primary: #800000;
+  --secondary: #a83232;
+  --accent: #d4af37;
+  --text-light: #f8f8f8;
+  --text-muted: #bdaaaa;
+  --transition: all 0.4s ease-in-out;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(26, 10, 10, 0.95);
+  border-bottom: 1px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar h1 { font-family: 'Playfair Display', serif; color: var(--accent); font-size: 1.6rem; }
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--text-light); font-weight: 500; transition: var(--transition); }
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero Section with Parallax */
+.hero {
+  height: 100vh;
+  background: url("school.png") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 10, 10, 0.7); /* dark overlay */
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--text-light);
+  animation: fadeIn 2s ease-out;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--accent);
+}
+.hero p { font-size: 1.3rem; margin-top: 0.5rem; color: var(--text-light); }
+.scroll-down {
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--accent);
+  text-decoration: none;
+  animation: bounce 2s infinite;
+}
+
+/* Sections */
+.section {
+  padding: 5rem 10%;
+  text-align: center;
+  background: var(--bg-card);
+  margin-top: -2px;
+}
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+.section p { max-width: 700px; margin: auto; color: var(--text-muted); margin-bottom: 1.5rem; }
+.btn {
+  padding: 0.7rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn:hover { background: var(--secondary); color: var(--text-light); }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0e0505;
+  color: var(--text-muted);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(10px); }
+  60% { transform: translateY(5px); }
+}
+
+script.js (scroll animations)
+// Reveal sections on scroll
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.8;
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < trigger) {
+      section.classList.add('visible');
+    }
+  });
+});
+
+Extra CSS for reveal effect
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+👉 This gives you:
+
+Parallax hero with school.png as the moving background
+
+Gold-maroon royal theme
+
+Scroll-down bouncing arrow
+
+Fade-in sections on scroll
+
+Do you also want me to add a glassmorphic floating logo (school.png smaller, inside hero) on top of the parallax background, so it looks 3D and futuristic?
+
+You said:
+its total mess now
+ChatGPT said:
+
+Got it — let’s reset and make this clean. Right now you want:
+
+A dark maroon & gold royal theme (not pale, not messy).
+
+A parallax hero section with school.png as the background.
+
+Smooth scroll-down arrow leading to more sections.
+
+Modern and minimal animations (not overwhelming).
+
+I’ll give you a simplified, stable structure:
+
+✅ index.html (clean base)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>SIMUN VII</h1>
+    <ul class="nav-links">
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="studyguides.html">Study Guides</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to SIMUN VII</h1>
+      <p>SICAS Model United Nations 2025</p>
+      <a href="#committees" class="scroll-down">↓</a>
+    </div>
+  </header>
+
+  <!-- Committees Section -->
+  <section id="committees" class="section">
+    <h2>Committees</h2>
+    <p>Discover engaging committees designed to test diplomacy and debate.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <h2>Conference Features</h2>
+    <p>Guides, resources, and opportunities to make SIMUN VII unforgettable.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | Hosted at SICAS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+✅ style.css (royal maroon palette, parallax, smooth scroll)
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --bg-dark: #160808;
+  --primary: #800000;
+  --secondary: #a83232;
+  --accent: #d4af37;
+  --text-light: #f8f8f8;
+  --muted: #cbbfbf;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(22, 8, 8, 0.95);
+  border-bottom: 1px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar h1 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero with Parallax */
+.hero {
+  height: 100vh;
+  background: url("school.png") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 8, 8, 0.7); /* dark overlay */
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-out;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--accent);
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+.scroll-down {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--accent);
+  animation: bounce 2s infinite;
+}
+
+/* Sections */
+.section {
+  padding: 5rem 10%;
+  text-align: center;
+  background: #2a0f0f;
+}
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.section p { color: var(--muted); }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0e0505;
+  color: var(--muted);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(10px); }
+  60% { transform: translateY(5px); }
+}
+
+✅ script.js (minimal interactivity)
+// Simple scroll reveal
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.8;
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < trigger) {
+      section.classList.add('visible');
+    }
+  });
+});
+
+Add to CSS (scroll reveal effect)
+.section { opacity: 0; transform: translateY(40px); transition: all 1s ease; }
+.section.visible { opacity: 1; transform: translateY(0); }
+
+
+This version is:
+✔ Clean and elegant
+✔ Maroon + gold palette
+✔ Parallax effect on school.png
+✔ Smooth scroll-down arrow
+✔ Fade-in sections
+
+Do you want me to add a floating glass-style SICAS logo on top of the parallax background, or keep the hero background only as school.png for now?
+
+You said:
+good
+now add logo
+sicas-logo.png
+ChatGPT said:
+
+Perfect ✅ Let’s add your sicas-logo.png on top of the parallax hero as a floating, slightly glass-styled element. It will sit above the text and animate in smoothly.
+
+🔹 Updated index.html (Hero Section)
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-content">
+    <img src="sicas-logo.png" alt="SICAS Logo" class="school-logo">
+    <h1>Welcome to SIMUN VII</h1>
+    <p>SICAS Model United Nations 2025</p>
+    <a href="#committees" class="scroll-down">↓</a>
+  </div>
+</header>
+
+🔹 Add to style.css (Logo Styling)
+/* School Logo */
+.school-logo {
+  width: 140px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: floatLogo 4s ease-in-out infinite;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Floating animation */
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+
+✨ Result:
+
+sicas-logo.png appears above the hero text.
+
+It has a glass effect with blur + semi-transparent background.
+
+It gently floats up and down for a modern, dynamic vibe.
+
+Still fits your dark maroon + gold royal theme.
+
+Do you want the SICAS logo to stay only in the hero (big and central), or also appear smaller inside the navbar for branding across all pages?
+
+You said:
+make it more beige not that gold
+and glassy imaage of school in the background
+and the font is too serif and ugly
+ChatGPT said:
+
+Got it ✅ let’s refine the vibe:
+
+Switch the gold accents → beige (so it feels more soft, elegant, not blingy).
+
+Make the background school image glassy/parallaxed so text pops but you still see SICAS.
+
+Replace the serif font with a modern clean sans-serif (Google Fonts like Poppins or Montserrat).
+
+🎨 Updated Palette
+
+Dark maroon base (#160808)
+
+Maroon highlights (#800000)
+
+Beige accent (#f5e6d3)
+
+Muted beige (#d9c6b5)
+
+✅ Updated style.css
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@500&display=swap');
+
+:root {
+  --bg-dark: #160808;       /* deep maroon */
+  --primary: #800000;       /* royal maroon */
+  --secondary: #a83232;     /* lighter maroon */
+  --accent: #f5e6d3;        /* beige */
+  --muted: #d9c6b5;         /* soft beige */
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-dark);
+  color: var(--accent);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(22, 8, 8, 0.95);
+  border-bottom: 1px solid var(--muted);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a {
+  text-decoration: none;
+  color: var(--accent);
+  transition: 0.3s;
+  font-weight: 500;
+}
+.nav-links a:hover { color: var(--secondary); }
+
+/* Hero with Parallax Glass */
+.hero {
+  height: 100vh;
+  background: url("school.png") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(4px) brightness(0.7); /* glassy effect */
+  background: rgba(22, 8, 8, 0.55);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-out;
+}
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+.scroll-down {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--accent);
+  animation: bounce 2s infinite;
+}
+
+/* Logo inside Hero */
+.school-logo {
+  width: 130px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border: 1px solid rgba(245, 230, 211, 0.3);
+  animation: floatLogo 4s ease-in-out infinite;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Sections */
+.section {
+  padding: 5rem 10%;
+  text-align: center;
+  background: #2a0f0f;
+}
+.section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.section p { color: var(--muted); max-width: 700px; margin: auto; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0e0505;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(10px); }
+  60% { transform: translateY(5px); }
+}
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+
+✨ Now the site will feel:
+
+Modern with Montserrat/Poppins fonts.
+
+Royal maroon + beige, not flashy gold.
+
+Glassy parallax school.png background so text pops.
+
+Floating SICAS logo for identity.
+
+Do you want the navbar itself to also be glassy (semi-transparent with blur), so it blends into the hero smoothly?
+
+You said:
+add logo on header next to simun
+ChatGPT said:
+
+Got it ✅ You want the SICAS logo (sicas-logo.png) to appear next to the “SIMUN VII” text in the header, while keeping the new maroon–beige glassy style. I’ll show you how to update your HTML + CSS to achieve this.
+
+✅ Update in index.html (and same for other pages’ header)
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="sicas-logo.png" alt="SICAS Logo" class="logo">
+      <h1>SIMUN VII</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="studyguides.html">Study Guides</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+</header>
+
+✅ Update in style.css
+
+Add this below your nav styles:
+
+/* === Header & Logo === */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 8px; /* subtle rounded look */
+  backdrop-filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+/* Update the title text */
+.logo-container h
+
+You said:
+make colour beige light cream
+Not yellow
+and large school image glassy parallax in background
+called school.png
+
+font is still ugly
+ChatGPT said:
+
+Perfect — let’s refine this into the modern, elegant, maroon + beige theme you want:
+
+Beige = light cream background and accents instead of gold/yellow.
+
+Large parallax glassy background image (school.png).
+
+Modern, clean sans-serif font (like Poppins or Montserrat).
+
+✅ Update style.css
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fdfaf6; /* light cream text */
+  background-color: #2c0e0e; /* deep maroon base */
+  line-height: 1.6;
+}
+
+/* === Header === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44, 14, 14, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f5ede0; /* light cream beige */
+}
+
+/* === Nav Links === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4b59c; /* beige hover */
+}
+
+/* === Hero Section with Parallax === */
+.hero {
+  height: 100vh;
+  background: url('school.png') no-repeat center center / cover;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 14, 14, 0.65); /* dark glass overlay */
+  backdrop-filter: blur(5px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #f5ede0;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === Sections === */
+section {
+  padding: 80px 10%;
+  background: #3d1616; /* deep maroon for contrast */
+}
+
+section:nth-child(even) {
+  background: #2c0e0e; /* alternate */
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #f5ede0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section p {
+  color: #e6d5c3; /* lighter beige for text */
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* === Buttons === */
+button, .btn {
+  background: #6a1b1b;
+  color: #f5ede0;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+✅ Update your index.html hero section
+<section class="hero">
+  <div class="hero-content">
+    <h2>Welcome to SIMUN VII</h2>
+    <p>Where diplomacy meets leadership. Explore committees, guides, and more.</p>
+    <a href="register.html" class="btn">Register Now</a>
+  </div>
+</section>
+
+
+✨ Now you’ll have:
+
+A maroon + beige cream royal palette
+
+Glassy parallax school background (school.png)
+
+Modern Montserrat font instead of serif
+
+A clean logo + SIMUN VII header
+
+Do you also want me to give you a smooth scroll animation so when users scroll, each section fades or slides in?
+
+You said:
+fix this
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>SIMUN VII</h1>
+    <ul class="nav-links">
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="studyguides.html">Study Guides</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Welcome to SIMUN VII</h2>
+    <p>Where diplomacy meets leadership. Explore committees, guides, and more.</p>
+    <a href="register.html" class="btn">Register Now</a>
+  </div>
+</section>
+
+
+  <!-- Committees Section -->
+  <section id="committees" class="section">
+    <h2>Committees</h2>
+    <p>Discover engaging committees designed to test diplomacy and debate.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <h2>Conference Features</h2>
+    <p>Guides, resources, and opportunities to make SIMUN VII unforgettable.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | Hosted at SICAS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+ChatGPT said:
+
+Got it 👍 I’ll clean and fix your code so it’s consistent with the maroon + beige style, includes the logo, and is ready to plug into your style.css.
+
+Here’s the fixed index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="sicas-logo.png" alt="SICAS Logo" class="logo">
+        <h1>SIMUN VII</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to SIMUN VII</h2>
+      <p>Where diplomacy meets leadership. Explore committees, guides, and more.</p>
+      <a href="register.html" class="btn">Register Now</a>
+    </div>
+  </section>
+
+  <!-- Committees Section -->
+  <section id="committees" class="section">
+    <h2>Committees</h2>
+    <p>Discover engaging committees designed to test diplomacy and debate.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <h2>Conference Features</h2>
+    <p>Guides, resources, and opportunities to make SIMUN VII unforgettable.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | Hosted at SICAS</p>
+    <p>Contact us at <a href="mailto:info@sicasmun.org">info@sicasmun.org</a></p>
+    <p>Location: SICAS Main Campus, Lahore</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+✅ Key Fixes
+
+Added logo next to SIMUN VII title.
+
+Wrapped navbar inside <header> for semantic clarity.
+
+Added Home link in navbar.
+
+Footer expanded with contact + location.
+
+Cleaned duplicate hero section comment.
+
+Do you want me to also update this so scroll animations (fade-in, slide-in) trigger when users scroll down to Committees and Features? That’ll make it feel much more dynamic and modern.
+
+You said:
+school png?
+ChatGPT said:
+
+Yes! The school.png is your background image for the hero section with parallax effect.
+
+In the style.css I gave earlier, you’ll see this part:
+
+.hero {
+  height: 100vh;
+  background: url('school.png') no-repeat center center / cover;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+📌 What to do:
+
+Place your actual image of SICAS school inside your project folder (where your index.html is).
+
+Save it as school.png (exact name, lowercase).
+
+Or, if the filename is different, change the url('school.png') to match.
+
+The CSS will automatically load it as a glassy, parallax background behind the hero section.
+
+Make sure the file path is correct:
+
+If school.png is in the same folder as index.html → url('school.png') is correct.
+
+If it’s in an images/ folder → url('images/school.png').
+
+⚡
+
+You said:
+give whole style css
+Light beige and maroon
+aersthetic dynamic glassy
+ChatGPT said:
+
+Perfect, let’s make the final style.css:
+
+Theme: deep maroon + light beige (cream, not yellow).
+
+Modern, glassy look with blurred overlays.
+
+Parallax hero background (school.png).
+
+Smooth hover effects and clean sans-serif font (Montserrat).
+
+Mobile-friendly.
+
+✅ style.css
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2c0e0e; /* dark maroon text for light areas */
+  background-color: #f8f3ed; /* light beige background */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44, 14, 14, 0.85); /* maroon glassy */
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+}
+
+.logo-container h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f5ede0; /* beige */
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4b59c; /* softer beige */
+}
+
+/* === Hero Section with Parallax === */
+.hero {
+  height: 100vh;
+  background: url('school.png') no-repeat center center / cover;
+  background-attachment: fixed; /* Parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 14, 14, 0.55); /* dark glass overlay */
+  backdrop-filter: blur(5px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #f5ede0;
+  max-width: 700px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* === Sections === */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #6a1b1b;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Alternate section background */
+#features {
+  background: #f1e8df; /* slightly darker beige */
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #f5ede0;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.4s; }
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+✨ Features you now have:
+
+Royal maroon + light beige palette.
+
+Glassy hero background (school.png) with parallax.
+
+Smooth fade-in animations for sections.
+
+Clean Montserrat font (no ugly serif).
+
+Dynamic hover effects + shadows.
+
+Fully mobile responsive.
+
+👉 Do you also want me to give you a matching CSS for committees.html, studyguides.html, and register.html so they look consistent with this style but have slight variations (like different hero titles)?
+
+You said:
+logo is too big and not fitting
+ChatGPT said:
+
+Got it 👍 The logo is currently fixed at 55px height, which might be too big depending on your sicas-logo.png.
+
+Let’s adjust it so it scales nicely and stays aligned with the text.
+
+🔧 Fix for Logo in style.css
+
+Find this part in your CSS:
+
+.logo {
+  height: 55px;
+  width: auto;
+}
+
+
+and replace it with:
+
+.logo {
+  height: 40px;        /* smaller, cleaner */
+  max-height: 40px;    /* ensures it won’t stretch */
+  width: auto;
+  object-fit: contain; /* keeps proportions */
+}
+
+🔧 Adjust alignment in .logo-container
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+✅ Result
+
+Logo will stay smaller, proportional, and aligned with "SIMUN VII".
+
+On mobile, it won’t overflow or look squashed.
+
+Do you want me to also make the SIMUN VII title shrink a bit on mobile so the logo + title always fit in one line?
+
+You said:
+make it right next to left of simun vii small
+ChatGPT said:
+
+Perfect! You want the logo small and snugly to the left of “SIMUN VII”, not above or oversized. Here’s the clean fix:
+
+🔹 HTML (index.html navbar part)
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="sicas-logo.png" alt="SICAS Logo" class="logo">
+      <span class="site-title">SIMUN VII</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="studyguides.html">Study Guides</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+</header>
+
+🔹 CSS (style.css)
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* small space between logo and title */
+}
+
+.logo {
+  height: 32px;       /* smaller, elegant size */
+  width: auto;
+  object-fit: contain;
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #f5ede0; /* light beige */
+  letter-spacing: 1px;
+}
+
+✅ Outcome
+
+Logo is small (32px height).
+
+Sits directly to the left of SIMUN VII in the navbar.
+
+Fully aligned vertically.
+
+Works on desktop and mobile.
+
+If you want, I can also make it shrink dynamically on smaller screens so the navbar never overflows. This will keep it fully responsive. Do you want me to do that?
+
+You said:
+adjust the css a bit to make it more royal and also images/school.png is the folder where it should be in the background, more dunamic glassy parallax
+
+
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e; /* dark maroon */
+  background-color: #f8f3ed; /* creamish beige */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44, 14, 14, 0.95); /* rich maroon, glassy */
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid rgba(245, 237, 224, 0.3); /* subtle beige accent */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f5ede0; /* creamish beige */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.site-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: #f5ede0;
+  opacity: 0.7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f5ede0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #d4b59c; /* softer beige */
+  transform: translateY(-3px);
+}
+
+/* === Hero Section with Parallax === */
+.hero {
+  height: 100vh;
+  background: url('school.png') no-repeat center center / cover;
+  background-attachment: fixed; /* Parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(44, 14, 14, 0.65); /* darker maroon overlay for contrast */
+  backdrop-filter: blur(12px); /* stronger glass effect */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #f5ede0;
+  max-width: 900px;
+  padding: 30px;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content .quote {
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #d4b59c; /* softer beige for quote */
+  margin-bottom: 20px;
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #6a1b1b; /* maroon accent */
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b; /* maroon */
+  color: #f5ede0;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: #8b2c2c; /* lighter maroon */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(44, 14, 14, 0.85); /* glassy maroon */
+  backdrop-filter: blur(8px);
+}
+
+/* === Features Section === */
+#features {
+  background: #f1e8df; /* slightly darker beige */
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 80px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bgZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.hero {
+  animation: bgZoom 10s ease-in-out infinite alternate;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-content .quote {
+    font-size: 1.3rem;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .quote {
+    font-size: 1.1rem;
+  }
+}
+ChatGPT said:
+
+Perfect! I can help you tweak this CSS to make it feel more royal, elegant, and dynamic, with your images/school.png as a glassy parallax background. Here’s a polished version with improvements:
+
+🔹 Adjusted style.css
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e; /* dark maroon */
+  background-color: #f8f3ed; /* light cream */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44, 14, 14, 0.95); /* rich maroon glass */
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  border-bottom: 2px solid rgba(245, 237, 224, 0.3); /* subtle beige */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 32px; /* smaller for elegance */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f5ede0; /* cream */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.site-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: #f5ede0;
+  opacity: 0.7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f5ede0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #d4b59c; /* softer beige */
+  transform: translateY(-3px);
+}
+
+/* === Hero Section with Parallax === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') no-repeat center center / cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(44,14,14,0.65);
+  backdrop-filter: blur(15px); /* stronger glass effect */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #f5ede0;
+  max-width: 900px;
+  padding: 30px;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .quote {
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #d4b59c;
+  margin-bottom: 20px;
+}
+
+/* === Hero Animation Zoom === */
+@keyframes bgZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  z-index: 0;
+  animation: bgZoom 15s ease-in-out infinite alternate;
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #6a1b1b; /* maroon accent */
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #f5ede0;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+.btn-secondary {
+  background: rgba(44,14,14,0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* === Features Section === */
+#features {
+  background: #f1e8df;
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 80px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-content .quote {
+    font-size: 1.3rem;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .quote {
+    font-size: 1.1rem;
+  }
+}
+
+✨ Changes & Improvements
+
+Parallax + glassy: hero::after + hero::before for dynamic glass effect and subtle zoom animation.
+
+Royal look: deeper shadows, elegant beige (#f5ede0) text, maroon accents.
+
+Smaller, aligned logo left of title.
+
+Typography: Montserrat + Open Sans for clean, modern feel.
+
+Section fade-in ready (.visible class for JS animation).
+
+Buttons look more elegant with rounded corners and hover shadows.
+
+If you want, I can also write the JS that adds fade-in animation when sections scroll into view, so it looks very dynamic and royal.
+
+Do you want me to do that?
+
+You said:
+make the hero more dynamic and neat
+its too uniform and basic and just same size fonts, add the dates and quotes more creatively and naturally
+also wheres the school.png background???
+again css
+ChatGPT said:
+
+Got it! Let’s make the hero section dynamic, elegant, and more visually interesting, with:
+
+School background (images/school.png) with glassy parallax effect.
+
+Creative layout: large title, smaller date, italic quote positioned naturally.
+
+Smooth fade-in + slide animations.
+
+Subtle zoom on background for a dynamic feel.
+
+Royal maroon + light beige theme.
+
+Here’s the updated CSS:
+
+🔹 style.css (hero section + general)
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e;
+  background-color: #f8f3ed;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.95);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  border-bottom: 2px solid rgba(245,237,224,0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f5ede0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.site-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: #f5ede0;
+  opacity: 0.7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f5ede0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #d4b59c;
+  transform: translateY(-3px);
+}
+
+/* === Hero Section with Dynamic Layout === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') no-repeat center center / cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(44,14,14,0.55); /* glassy overlay */
+  backdrop-filter: blur(12px);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: #f5ede0;
+  max-width: 900px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero-content .dates {
+  font-size: 1.5rem;
+  color: #d4b59c;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  max-width: 650px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .quote {
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #f5ede0;
+  margin-top: 10px;
+  max-width: 600px;
+  border-left: 3px solid #d4b59c;
+  padding-left: 15px;
+}
+
+/* Hero Background Animation */
+@keyframes bgZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  z-index: 0;
+  animation: bgZoom 15s ease-in-out infinite alternate;
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #6a1b1b;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #f5ede0;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 80px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-content .quote {
+    font-size: 1.3rem;
+  }
+
+  .hero-content .dates {
+    font-size: 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .quote {
+    font-size: 1.1rem;
+  }
+
+  .hero-content .dates {
+    font-size: 1rem;
+  }
+}
+
+🔹 Hero HTML Example
+<section class="hero">
+  <div class="hero-content">
+    <h2>SIMUN VII</h2>
+    <div class="dates">October 10-12, 2025</div>
+    <p>Where diplomacy meets leadership. Explore committees, guides, and more.</p>
+    <div class="quote">"Bringing together the leaders of tomorrow, today."</div>
+    <a href="register.html" class="btn">Register Now</a>
+  </div>
+</section>
+
+
+✅ What’s new:
+
+Background from images/school.png with parallax + zoom animation.
+
+Hero content layout is more natural: title, date, description, quote, button.
+
+Glassy overlay and dynamic shadows for elegance.
+
+Fade-in animations make the hero appear smoothly.
+
+Mobile-friendly adjustments for fonts and spacing.
+
+If you want, I can also add subtle animated floating shapes or gradient lights in the hero to make it even more modern and dynamic like a professional MUN website.
+
+Do you want me to do that next?
+
+You said:
+the simun vii is too near the top in hero
+make it smaller, and more minialist in themiddle
+also the parallax is too weird
+make it non blurry the school png
+ChatGPT said:
+
+Perfect, we can make the hero minimalist, centered, and elegant, and also fix the background so it’s sharp (no blur) and fixed nicely without the weird parallax distortion.
+
+Here’s the updated CSS for the hero:
+
+🔹 style.css (Hero Section Updated)
+/* === Hero Section Minimalist === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') no-repeat center center / cover;
+  background-attachment: fixed; /* fixed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove blur overlay */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* subtle dark overlay for contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #f5ede0;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem; /* smaller, minimalist */
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .dates {
+  font-size: 1.2rem;
+  color: #d4b59c;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content .quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #f5ede0;
+  margin-top: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 3px solid #d4b59c;
+  padding-left: 12px;
+}
+
+/* Remove zoom effect, keep simple parallax */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* Fade-in animation for hero */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+  .hero-content .dates {
+    font-size: 1.1rem;
+  }
+  .hero-content p, .hero-content .quote {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content .dates {
+    font-size: 0.95rem;
+  }
+  .hero-content p, .hero-content .quote {
+    font-size: 0.9rem;
+  }
+}
+
+🔹 Hero HTML (Centered, Minimalist)
+<section class="hero">
+  <div class="hero-content">
+    <h2>SIMUN VII</h2>
+    <div class="dates">October 10-12, 2025</div>
+    <p>Where diplomacy meets leadership. Explore committees, guides, and more.</p>
+    <div class="quote">"Bringing together the leaders of tomorrow, today."</div>
+    <a href="register.html" class="btn">Register Now</a>
+  </div>
+</section>
+
+✅ What Changed
+
+Title smaller, centered in the middle of the hero.
+
+Dates and quote neatly spaced, more natural.
+
+Removed blur from school background, now sharp and clear.
+
+Removed zoom animation for a clean, professional feel.
+
+Minimalist and elegant layout, mobile-friendly.
+
+If you want, I can also make the quote float slightly with a subtle animation and have the background slowly move (parallax-y) without blur, to make it visually dynamic but still minimalist.
+
+Do you want me to do that next?
+
+You said:
+give whole css
+ChatGPT said:
+
+Absolutely! Here’s a complete, polished style.css for your SIMUN VII website, incorporating:
+
+Maroon and light beige palette
+
+Minimalist, elegant, centered hero
+
+Sharp, glassy school background (images/school.png)
+
+Dynamic, professional buttons and sections
+
+Responsive design for mobile
+
+Subtle fade-in animations for sections
+
+🔹 style.css
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e; /* dark maroon */
+  background-color: #f8f3ed; /* light cream beige */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.95); /* rich maroon glass */
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  border-bottom: 2px solid rgba(245,237,224,0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 32px; /* small, elegant */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f5ede0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f5ede0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #d4b59c; /* softer beige */
+  transform: translateY(-3px);
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') no-repeat center center / cover;
+  background-attachment: fixed; /* fixed, sharp background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* subtle overlay for contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #f5ede0;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .dates {
+  font-size: 1.2rem;
+  color: #d4b59c;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content .quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #f5ede0;
+  margin-top: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 3px solid #d4b59c;
+  padding-left: 12px;
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #6a1b1b;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #f5ede0;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 80px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content .dates {
+    font-size: 1.1rem;
+  }
+
+  .hero-content p, .hero-content .quote {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content .dates {
+    font-size: 0.95rem;
+  }
+
+  .hero-content p, .hero-content .quote {
+    font-size: 0.9rem;
+  }
+}
+
+
+This gives you:
+
+Minimalist centered hero with title, date, quote.
+
+School background sharp and fixed.
+
+Elegant maroon + beige theme, modern font.
+
+Dynamic but simple section fade-in.
+
+Fully responsive.
+
+If you want, I can now add a subtle floating/scroll animation for the quote or school background, so it feels dynamic without breaking the minimalist style.
+
+Do you want me to add that?
+
+You said:
+font sizing and placing and colours? pathetic
+Also its still blurry
+make it minimalist and mODERN
+
+
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e; /* dark maroon */
+  background-color: #f8f3ed; /* light cream beige */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.95); /* rich maroon glass */
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  border-bottom: 2px solid rgba(245,237,224,0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  height: 32px; /* small, elegant */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f5ede0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f5ede0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #d4b59c; /* softer beige */
+  transform: translateY(-3px);
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') no-repeat center center / cover;
+  background-attachment: fixed; /* fixed, sharp background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* subtle overlay for contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #f5ede0;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .dates {
+  font-size: 1.2rem;
+  color: #d4b59c;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content .quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #f5ede0;
+  margin-top: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 3px solid #d4b59c;
+  padding-left: 12px;
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #6a1b1b;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #f5ede0;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 80px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content .dates {
+    font-size: 1.1rem;
+  }
+
+  .hero-content p, .hero-content .quote {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content .dates {
+    font-size: 0.95rem;
+  }
+
+  .hero-content p, .hero-content .quote {
+    font-size: 0.9rem;
+  }
+}
+ChatGPT said:
+
+Got it! We can totally revamp your hero and fonts to make it modern, minimalist, and elegant, with a sharp, dynamic school background and better typography. I’ll simplify the design so fonts have clear hierarchy, spacing looks natural, and the background (school.png) is sharp, not blurry.
+
+Here’s the full revised CSS:
+
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e;
+  background-color: #f8f3ed; /* light cream beige */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.9);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #f5ede0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4b59c;
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:
+
+You said:
+also fix the header logo its too small and too right
+needs to be on left and clikable nesat
+ChatGPT said:
+
+Got it! Let’s make the header logo properly aligned on the left, clickable (links to index.html), and sized proportionally—not too small. We’ll also ensure the site title is next to it with balanced spacing.
+
+Here’s the updated header HTML and CSS:
+
+🔹 HTML (Header)
+<header>
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/sicas-logo.png" alt="SICAS Logo" class="logo">
+      </a>
+      <span class="site-title">SIMUN VII</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="studyguides.html">Study Guides</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+</header>
+
+🔹 CSS (Header & Logo)
+/* === Navbar & Logo === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;      /* slightly larger for visibility */
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;    /* clickable */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.site-title {
+ 
+
+You said:
+WHOLE CSS
+ChatGPT said:
+
+Absolutely! Here’s a completely revamped CSS for your SIMUN VII site, addressing everything:
+
+Header logo left-aligned, clickable, proportionate
+
+Minimalist, modern, elegant design
+
+Maroon and light beige palette
+
+Sharp, glassy school background (images/school.png)
+
+Dynamic, neat hero section with creative dates and quotes
+
+Proper font sizing and hierarchy
+
+Responsive and mobile-friendly
+
+🔹 style.css
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e; /* dark maroon */
+  background-color: #f8f3ed; /* light cream beige */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.9);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #f5ede0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4b59c;
+  transform: translateY(-2px);
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2); /* subtle overlay for contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #f5ede0;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .dates {
+  font-size: 1.2rem;
+  color: #d4b59c;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content .quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #f5ede0;
+  border-left: 3px solid #d4b59c;
+  padding-left: 12px;
+  margin-top: 5px;
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #6a1b1b;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #f5ede0;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 80px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 5%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    height: 38px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content .dates {
+    font-size: 1rem;
+  }
+
+  .hero-content p, .hero-content .quote {
+    font-size: 0.95rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content .dates {
+    font-size: 0.9rem;
+  }
+
+  .hero-content p, .hero-content .quote {
+    font-size: 0.85rem;
+  }
+}
+
+
+✅ Key Fixes and Improvements:
+
+Logo is left-aligned, clickable, slightly larger for visibility.
+
+Hero is minimalist: title, dates, and quote neatly stacked with spacing.
+
+School background is sharp and non-blurry (background-attachment: fixed; background-size: cover).
+
+Font hierarchy is clear, sizes consistent, modern.
+
+Buttons, links, and hover effects are subtle but dynamic.
+
+Fully responsive down to mobile.
+
+If you want, I can also make the hero’s quote and dates float slightly as you scroll for a subtle dynamic effect, without blurring the school background.
+
+Do you want me to add that?
+
+You said:
+ugly
+ChatGPT said:
+
+Got it. We need a clean, modern, minimalist MUN look with royal maroon + soft beige, non-blurry school background, and dynamic hero without clutter or harsh shadows. Let’s redo this properly. I’ll focus on:
+
+Hero centered with SIMUN VII smaller and minimalist
+
+Dates and quote elegantly positioned below title
+
+School background sharp and glassy, subtle parallax
+
+Header logo neat left, clickable
+
+Modern fonts, hierarchy, spacing
+
+Minimal overlays, no heavy blur
+
+Here’s the fully revamped CSS:
+
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2c0e0e; /* dark maroon */
+  background-color: #fdf8f2; /* very light beige */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Header & Navbar === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.85);
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+.site-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #f5ede0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #f5ede0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4b59c;
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f5ede0;
+}
+
+.hero .dates {
+  font-size: 1.1rem;
+  color: #d4b59c
+
+You said:
+the title is too high
+dates are too below
+too many sizes and italics
+
+fix everything from scratch
+new css
+ChatGPT said:
+
+Perfect, I understand exactly what you want now: a minimalist, modern, elegant hero, centered SIMUN VII, subtle dates, no excessive italics or different font sizes, logo neatly left in header, sharp school background, light beige + maroon palette, mobile-friendly, clean spacing, and no messy overlays. Let’s start fresh.
+
+Here’s a complete new CSS:
+
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdf8f2; /* light cream beige */
+  color: #2c0e0e; /* dark maroon */
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* === Header === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.85); /* maroon glass effect */
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #f5ede0;
+  letter-spacing: 1px;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5ede0;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4b59c;
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  position: relative;
+  text-align: center;
+  padding-top: 60px; /* offset for header */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f5ede0;
+  margin-bottom: 15px;
+}
+
+.hero .dates {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #d4b59c;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #f5ede0;
+  max-width: 600px;
+}
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #4a2a2a;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .dates {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero .dates {
+    font-size: 0.9rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+}
+
+
+This CSS makes:
+
+SIMUN VII title centered vertically in hero
+
+Dates right below the title, proportional and subtle
+
+Minimal font hierarchy: only hero title, dates, body text
+
+No italics except maybe quote if added
+
+Header logo left, clickable, perfectly aligned
+
+Sharp, clean school background with parallax, no blur
+
+Clean spacing and responsive for mobile
+
+If you want, I can also add a subtle floating animation for the hero content so it feels dynamic without clutter.
+
+Do you want me to do that next?
+
+You said:
+the background of school image is too colorifl and text not showing
+what do i do
+ChatGPT said:
+
+Ah, yes. This is a common issue: if your background image is colorful or busy, the hero text can get lost. There are a few elegant ways to fix it while keeping it modern and clean:
+
+1. Add a subtle overlay
+
+A semi-transparent dark overlay over the image will make the text pop without making the image blurry.
+
+In your CSS:
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* dark overlay */
+  z-index: 1;
+}
+
+
+Then make sure your .hero-content has position: relative; z-index: 2; so it appears above the overlay.
+
+2. Use text shadows
+
+Adding subtle text shadows can improve contrast on colorful backgrounds:
+
+.hero h1,
+.hero .dates,
+.hero p {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+
+This gives the text a soft glow, improving readability without changing the image.
+
+3. Darken the image slightly
+
+Instead of overlay, you can apply a CSS filter to the image itself:
+
+.hero {
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  filter: brightness(0.7); /* darkens image 30% */
+}
+
+
+This keeps the image sharp but reduces brightness so the text pops.
+
+Recommended approach
+
+The cleanest and most modern solution is to use overlay + text shadows. That way the image stays sharp, the text is readable, and it still looks dynamic and aesthetic.
+
+If you want, I can update your whole hero CSS to implement this properly with a modern look, so it’s ready to copy-paste.
+
+Do you want me to do that?
+
+You said:
+the text got dark too
+i need bright pop text
+ChatGPT said:
+
+Ah, I understand—you want the text to remain bright and pop, while the background image is darkened or muted so it’s readable. Let’s do this the clean, modern way:
+
+We’ll combine three things:
+
+Dark overlay on the image so colors don’t clash.
+
+Text stays bright (#fdf8f2 or #ffffff) and pops.
+
+Optional subtle text shadow for extra contrast.
+
+Here’s a ready-to-use hero CSS snippet:
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+}
+
+/* Dark overlay behind text */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* dark but semi-transparent */
+  z-index: 1;
+}
+
+/* Hero content above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fdf8f2; /* bright cream text */
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+/* Hero text */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* subtle glow for pop */
+}
+
+.hero .dates {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fdf8f2; /* bright text */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #fdf8f2;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+
+✅ What this does:
+
+The overlay darkens the image, making text readable.
+
+Text is bright cream and stands out.
+
+Subtle shadows add extra pop without looking messy.
+
+The school image remains sharp, non-blurry, and dynamic.
+
+If you want, I can rewrite your entire CSS for header + hero + sections using this method, fully polished and modern. That way it’s all consistent and ready to paste.
+
+Do you want me to do that?
+
+You said:
+i want SIMUN VII very large white with shadow right in middle
+and the rest smaller and properly hierarchy aligned
+small italics quote NOT beige
+and clear register now button
+ChatGPT said:
+
+Perfect! Let’s design the hero section properly with a clear typographic hierarchy:
+
+SIMUN VII: very large, bright white, central, subtle shadow.
+
+Dates: smaller, below the title, clean, contrasting but not overpowering.
+
+Quote: small, subtle italics, light white/gray text (not beige).
+
+Register button: clear, visible, maroon background, bright text, rounded.
+
+Background: sharp school image with a dark overlay for readability.
+
+Here’s a ready-to-use CSS for the hero section:
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+}
+
+/* Dark overlay behind text */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay for contrast */
+  z-index: 1;
+}
+
+/* Hero content above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+/* Main title: SIMUN VII */
+.hero h1 {
+  font-size: 5rem; /* very large */
+  font-weight: 800;
+  color: #ffffff; /* bright white */
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  margin-bottom: 10px;
+}
+
+/* Dates */
+.hero .dates {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff; /* white */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  margin-bottom: 10px;
+}
+
+/* Paragraph / subtitle */
+.hero p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Small italic quote */
+.hero .quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.8); /* semi-transparent white */
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+/* Register Button */
+.hero .btn {
+  margin-top: 20px;
+  background: #6a1b1b; /* maroon */
+  color: #fdf8f2; /* cream/white text */
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #8b2c2c; /* lighter maroon on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero .dates {
+    font-size: 1.3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero .quote {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero .dates {
+    font-size: 1.1rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .hero .quote {
+    font-size: 0.85rem;
+  }
+}
+
+
+✅ Notes / How it looks:
+
+SIMUN VII: central, huge, white, shadowed for maximum readability.
+
+Dates: smaller, below title, white for clear hierarchy.
+
+Subtitle / description: smaller text below dates.
+
+Quote: tiny, italic, subtle white/gray.
+
+Register button: visible, rounded, maroon background, bright text.
+
+Background image: sharp, dark overlay, no blur.
+
+If you want, I can rewrite your entire CSS with header + hero + sections + footer, fully modern, minimalist, with this exact hierarchy applied and consistent font sizing for a professional MUN website.
+
+Do you want me to do that next?
+
+You said:
+make simun vii a bit lower in the middle of the image
+lower
+LARGEST
+and dates small 
+Where diplomacy meets leadership. Explore committees, guides, and more. delete this
+ChatGPT said:
+
+Perfect! We can make SIMUN VII huge and centered vertically lower, have the dates smaller below, remove the subtitle text, keep the quote if needed, and a clear register button.
+
+Here’s a fresh CSS for the hero:
+
+/* === Hero Section === */
+.hero {
+
+You said:
+also simun vii needs to be white
+ChatGPT said:
+
+Got it! White SIMUN VII, very large, positioned slightly lower in the hero, small dates underneath, remove the subtitle, clear register button, and optional small italic quote. Here’s the clean updated hero CSS:
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* push content lower in the middle */
+  text-align: center;
+  position: relative;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  padding-bottom: 15%; /* space from bottom */
+}
+
+/* Dark overlay behind text */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* subtle dark overlay */
+  z-index: 1;
+}
+
+/* Hero content above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Main title: SIMUN VII */
+.hero h1 {
+  font-size: 6rem; /* very large */
+  font-weight: 800;
+  color: #ffffff; /* bright white */
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7); /* subtle shadow for pop */
+  margin-bottom: 10px;
+}
+
+/* Dates */
+.hero .dates {
+  font-size: 1.3rem; /* small and subtle */
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+/* Small italic quote */
+.hero .quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+/* Register Button */
+.hero .btn {
+  margin-top: 20px;
+  background: #6a1b1b; /* maroon */
+  color: #fdf8f2; /* bright cream text */
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #8b2c2c; /* lighter maroon on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .hero .dates {
+    font-size: 1.1rem;
+  }
+  .hero .quote {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero .dates {
+    font-size: 0.9rem;
+  }
+  .hero .quote {
+    font-size: 0.8rem;
+  }
+}
+
+
+✅ Changes applied:
+
+SIMUN VII is very large and white, with a subtle shadow for contrast.
+
+Positioned lower in the hero, using align-items: flex-end + padding.
+
+Dates are smaller, white, subtle, directly under the title.
+
+Removed the previous long subtitle text.
+
+Register button is clear, visible, rounded, maroon.
+
+Background image remains sharp with a slight dark overlay for readability.
+
+If you want, I can write the full CSS for the entire site next, so header, hero, sections, footer all have a consistent modern, minimalist, maroon & beige theme that matches this hero perfectly.
+
+Do you want me to do that?
+
+You said:
+simun vii is too high and above it overflows with header
+ChatGPT said:
+
+Ah, I see! The header is overlapping the hero title because the hero content is aligned too high. Let’s fix it properly:
+
+We want:
+
+SIMUN VII centered vertically lower, not too close to the top.
+
+Enough space above for the fixed header.
+
+Maintain the modern, minimalist look.
+
+Here’s the updated hero CSS:
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
+  text-align: center;
+  position: relative;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  padding-top: 80px; /* space for header */
+  padding-bottom: 10%;
+}
+
+/* Dark overlay behind text */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* Hero content above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(10%); /* push content slightly lower */
+}
+
+/* Main title: SIMUN VII */
+.hero h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+  margin: 0;
+}
+
+/* Dates */
+.hero .dates {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Small italic quote */
+.hero .quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+/* Register Button */
+.hero .btn {
+  margin-top: 20px;
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 4rem; }
+  .hero .dates { font-size: 1.1rem; }
+  .hero .quote { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.8rem; }
+  .hero .dates { font-size: 0.9rem; }
+  .hero .quote { font-size: 0.8rem; }
+}
+
+
+Key fixes:
+
+padding-top: 80px; ensures space for the fixed header.
+
+transform: translateY(10%); pushes the content slightly lower for better vertical alignment.
+
+SIMUN VII remains very large, white, with shadow, clearly visible.
+
+Dates are small and subtle underneath.
+
+If you want, I can rewrite the full site CSS with this perfect header + hero alignment so the whole site is consistent, modern, and royal maroon/beige.
+
+Do you want me to do that?
+
+You said:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMUN VII</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="images/sicas-logo.png" alt="SICAS Logo" class="logo">
+        <span class="site-title">SIMUN VII</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>SIMUN VII</h1>
+    <div class="dates">24 | 25 | 26 October 2025</div>
+    <div class="quote">A legacy in the making</div>
+    <a href="register.html" class="btn">Register Now</a>
+  </div>
+</section>
+
+  <!-- Committees Section -->
+  <section id="committees" class="section">
+    <h2>Our Committees</h2>
     <p>Explore a diverse range of committees designed to challenge and inspire.</p>
     <a href="committees.html" class="btn btn-secondary">Discover Committees</a>
   </section>
@@ -45,6 +6867,323 @@
   <section id="studyguides" class="section">
     <h2>Study Guides</h2>
     <p>Access comprehensive study guides with information crafted to channel your research.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>SIMUN VII | 24–26 October 2025</p>
+    <p>A Legacy in the Making</p>
+    <p>Hosted at SICAS Main Campus, Lahore</p>
+  
+    <p>© 2025 SIMUN VII</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+add a button in html below
+
+Access comprehensive study guides with information crafted to channel your research.
+
+See study guides
+ChatGPT said:
+
+Sure! You can add a button right below that paragraph. Here’s the updated section of your HTML with the new button:
+
+<!-- Features Section -->
+<section id="studyguides" class="section">
+  <h2>Study Guides</h2>
+  <p>Access comprehensive study guides with information crafted to channel your research.</p>
+  <a href="studyguides.html" class="btn btn-secondary">See Study Guides</a>
+</section>
+
+
+✅ Explanation:
+
+btn btn-secondary matches your previous styling for secondary buttons.
+
+The button links to studyguides.html.
+
+Placed directly below the paragraph, keeping layout clean.
+
+You can also style .btn-secondary in your CSS if you want it slightly different from the main “Register Now” button.
+
+Do you want me to add a hover effect for this secondary button too?
+
+You said:
+the button of see study guides and disocver committees is too near the paragraph
+give slight margin on top
+
+
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdf8f2; /* light cream beige */
+  color: #2c0e0e; /* dark maroon */
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* === Header === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(44,14,14,0.85); /* maroon glass effect */
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #f5ede0;
+  letter-spacing: 1px;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5ede0;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4b59c;
+}
+
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #4a2a2a;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .dates {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
+  text-align: center;
+  position: relative;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  padding-top: 80px; /* space for header */
+  padding-bottom: 10%;
+}
+
+/* Dark overlay behind text */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Hero content above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(10%); /* push content slightly lower */
+}
+
+/* Main title: SIMUN VII */
+.hero h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+  margin: 0;
+}
+
+/* Dates */
+.hero .dates {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+/* Small italic quote */
+.hero .quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  max-width: 500px;
+  margin-top: 0px;
+}
+
+/* Register Button */
+.hero .btn {
+  margin-top: 20px;
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 4rem; }
+  .hero .dates { font-size: 1.1rem; }
+  .hero .quote { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.8rem; }
+  .hero .dates { font-size: 0.9rem; }
+  .hero .quote { font-size: 0.8rem; }
+}
+ChatGPT said:
+
+You can add a slight top margin to your secondary buttons to separate them from the paragraph. Add this to your CSS:
+
+/* Add spacing above secondary buttons */
+.btn-secondary {
+  margin-top: 15px; /* adjusts space from paragraph */
+}
+
+
+Then in your HTML, make sure your buttons use the class btn-secondary:
+
+<p>Access comprehensive study guides with information crafted to channel your research.</p>
+<a href="studyguides.html" class="btn btn-secondary">See Study Guides</a>
   </section>
 
   <!-- Footer -->
