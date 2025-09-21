@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | SIMUN VII</title>
+  <link rel="stylesheet" href="register.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+<div class="logo">
+  <a href="index.html">
+    <img src="images/sicas-logo.png" alt="SICAS Logo">
+  </a>
+</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="studyguides.html">Study Guides</a></li>
+        <li><a href="register.html" class="active">Register Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Registration Form -->
+  <main>
+    <section class="hero">
+      <h1>Register for SIMUN VII</h1>
+      <p>Join one of Pakistan’s leading Model UN conferences.</p>
+    </section>
+
+    <section class="form-section">
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="institution">Institution</label>
+        <input type="text" name="institution" id="institution" required>
+
+        <label for="committee">Preferred Committee</label>
+        <select name="committee" id="committee">
+          <option value="unhrc">UNHRC</option>
+          <option value="disec">DISEC</option>
+          <option value="unsc">UNSC</option>
+          <option value="who">WHO</option>
+        </select>
+
+        <button type="submit" class="btn">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SIMUN VII | SICAS Model United Nations</p>
+    <p>Contact: <a href="mailto:simun@sicas.edu.pk">simun@sicas.edu.pk</a> | Location: SICAS Lahore</p>
+  </footer>
+</body>
+</html>

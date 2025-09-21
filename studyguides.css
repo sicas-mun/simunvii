@@ -1,0 +1,21 @@
+@import url("style.css");
+
+.guides {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.guides li {
+  margin: 0.5rem 0;
+}
+
+.guides li a {
+  color: var(--maroon);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.guides li a:hover {
+  color: #5c0000;
+}

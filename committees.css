@@ -1,0 +1,25 @@
+@import url("style.css");
+
+.committees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.committee-card {
+  background: var(--maroon);
+  color: var(--text-light);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.committee-card:hover {
+  transform: translateY(-5px);
+  background: #5c0000;
+}
