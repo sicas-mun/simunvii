@@ -80,47 +80,121 @@ header {
 }
 
 /* === Hero Section === */
+/* === Hero Section === */
 .hero {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background: url('images/school.png') center center / cover no-repeat fixed;
-  filter: brightness(0.7); /* darkens image 30% */
-
-  position: relative;
   text-align: center;
-  padding-top: 60px; /* offset for header */
+  position: relative;
+  background: url('images/school.png') center center / cover no-repeat fixed;
 }
 
-
-.hero h1,
-.hero .dates,
-.hero p {
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+/* Dark overlay behind text */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay for contrast */
+  z-index: 1;
 }
 
+/* Hero content above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+}
 
+/* Main title: SIMUN VII */
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #f5ede0;
-  margin-bottom: 15px;
-}
-
-.hero .dates {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #d4b59c;
+  font-size: 5rem; /* very large */
+  font-weight: 800;
+  color: #ffffff; /* bright white */
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
   margin-bottom: 10px;
 }
 
+/* Dates */
+.hero .dates {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff; /* white */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+  margin-bottom: 10px;
+}
+
+/* Paragraph / subtitle */
 .hero p {
-  font-size: 1rem;
-  color: #f5ede0;
+  font-size: 1.2rem;
+  color: #ffffff;
   max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Small italic quote */
+.hero .quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.8); /* semi-transparent white */
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+/* Register Button */
+.hero .btn {
+  margin-top: 20px;
+  background: #6a1b1b; /* maroon */
+  color: #fdf8f2; /* cream/white text */
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #8b2c2c; /* lighter maroon on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero .dates {
+    font-size: 1.3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero .quote {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero .dates {
+    font-size: 1.1rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .hero .quote {
+    font-size: 0.85rem;
+  }
 }
 
 /* === Sections === */
