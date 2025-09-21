@@ -1,8 +1,8 @@
-@import url("style.css");
+@import url("style.css"); /* base styles */
 
 /* Hero Section */
 .hero {
-  padding: 120px 5% 60px; /* more padding on top */
+  padding: 120px 5% 60px; /* top padding more */
   text-align: center;
 }
 
@@ -21,20 +21,41 @@
 
 /* Committees Section */
 .committee-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem; /* extra bottom padding for spacing */
+  margin-top: 3rem; /* padding above grid */
+  margin-bottom: 3rem; /* padding below grid */
 }
 
+/* Large top committee card */
+.committee-card.large-card {
+  grid-column: 1 / -1; /* spans both columns */
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.committee-card.large-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.committee-card.large-card p {
+  font-size: 1.1rem;
+}
+
+/* Small cards */
 .committee-card {
-  background: #6a1b1b; /* maroon */
-  color: #fdf8f2; /* light text */
+  background: #6a1b1b;
+  color: #fdf8f2;
   padding: 1.5rem 2rem;
   border-radius: 10px;
-  min-width: 220px;
   text-align: center;
   transition: transform 0.3s, background 0.3s;
   cursor: pointer;
@@ -56,14 +77,28 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .committee-list {
-    gap: 0.8rem;
+    grid-template-columns: 1fr 1fr; /* still 2 columns */
   }
 
-  .committee-card {
-    min-width: 180px;
-    padding: 1rem 1.5rem;
+  .committee-card.large-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .committee-card.large-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .committee-list {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 1rem;
+  }
+
+  .committee-card.large-card {
+    padding: 1.8rem 2rem;
   }
 
   .committee-card h2 {
@@ -89,7 +124,14 @@
   }
 
   .committee-card {
-    min-width: 100%;
     padding: 1rem;
+  }
+
+  .committee-card.large-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .committee-card.large-card p {
+    font-size: 0.95rem;
   }
 }
