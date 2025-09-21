@@ -15,7 +15,6 @@ body {
 }
 
 /* === Header === */
-/* === Header === */
 header {
   position: fixed;
   top: 0;
@@ -139,7 +138,6 @@ header {
   font-size: 1.2rem;
 }
 
-
 /* Committees Section */
 .committee-list {
   padding: 120px 5px 80px;
@@ -204,45 +202,40 @@ header {
   height: 80px;
 }
 
-
-/* === Explore Agenda Button inside Committee Cards === */
-/* Explore Agenda Button inside Committee Cards */
+/* Explore Agenda Button */
 .committee-card .btn {
   display: inline-block;
-  background: #6a1b1b; /* red button */
+  background: #6a1b1b; 
   color: #fdf8f2;
   padding: 12px 28px;
   border-radius: 40px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
-  margin-top: 15px; /* spacing from description */
+  margin-top: 15px;
 }
 
 .committee-card .btn:hover {
-  background: #8b2c2c; /* darker red on hover */
+  background: #8b2c2c; 
   transform: scale(1.05);
 }
 
-
-/* Optional: adjust spacing for large top card */
 .committee-card.large-card .btn {
   font-size: 1.1rem;
   padding: 14px 32px;
   margin-top: 20px;
 }
 
-
-/* === Footer === */
+/* Footer */
 footer {
   background: #2c0e0e;
   color: #f5ede0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* keep map top-aligned */
+  align-items: flex-start;
   padding: 20px 50px;
   flex-wrap: wrap;
-  min-height: 250px; /* ensures footer is tall enough */
+  min-height: 250px;
   position: relative;
 }
 
@@ -250,7 +243,7 @@ footer .footer-info {
   max-width: 50%;
   display: flex;
   flex-direction: column;
-  margin-top: auto; /* pushes info to bottom */
+  margin-top: auto;
 }
 
 footer .footer-info p {
@@ -284,15 +277,22 @@ footer iframe {
   .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 0.9rem; }
 }
+
 /* === Popup Modal === */
 .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  display: none; /* hidden by default */
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 2000;
+}
+
+.modal-overlay.active {
+  display: flex; /* center modal */
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
@@ -318,7 +318,7 @@ footer iframe {
 .modal p {
   font-size: 1rem;
   line-height: 1.6;
-  white-space: pre-line; /* keeps line breaks from JS agendas */
+  white-space: pre-line;
 }
 
 /* Close button */
