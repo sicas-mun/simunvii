@@ -87,16 +87,11 @@ header {
 }
 
 .section h2 {
-  font-size: 2.2rem;
-  color: #2c0e0e;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* reduce space below heading */
 }
 
 .section p {
-  font-size: 1.1rem;
-  color: #4a2a2a;
-  max-width: 700px;
-  margin: 0 auto;
+  margin-bottom: 10px; /* reduce space below paragraph */
 }
 
 /* Add spacing above secondary buttons */
@@ -205,18 +200,31 @@ header {
 footer {
   background: #2c0e0e;
   color: #f5ede0;
-  text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 60px 20px;
+  padding: 60px 50px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 footer .footer-info {
-  max-width: 500px;
+  max-width: 50%;
 }
 
+footer .footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+footer iframe {
+  border: 0;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/* Links styling */
 footer a {
   color: #d4b59c;
   text-decoration: none;
@@ -224,13 +232,6 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-}
-
-footer iframe {
-  border: 0;
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
 }
 
 /* === Responsive === */
@@ -242,11 +243,16 @@ footer iframe {
     gap: 30px;
   }
 
+  footer .footer-info {
+    max-width: 100%;
+  }
+
   footer iframe {
     width: 100%;
     height: 200px;
   }
 }
+
 
 @media (max-width: 768px) {
   .hero h1 { font-size: 4rem; }
