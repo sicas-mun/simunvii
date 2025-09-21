@@ -10,7 +10,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   color: #2c0e0e; /* dark maroon */
-  background-color: #f8f3ed; /* creamish beige */
+  background-color: #f8f3ed; /* light cream */
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -20,11 +20,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(44, 14, 14, 0.95); /* rich maroon, glassy */
+  background: rgba(44, 14, 14, 0.95); /* rich maroon glass */
   backdrop-filter: blur(15px);
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  border-bottom: 2px solid rgba(245, 237, 224, 0.3); /* subtle beige accent */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  border-bottom: 2px solid rgba(245, 237, 224, 0.3); /* subtle beige */
 }
 
 .navbar {
@@ -39,21 +39,21 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .logo {
-  height: 45px;
+  height: 32px; /* smaller for elegance */
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
 }
 
 .site-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #f5ede0; /* creamish beige */
+  color: #f5ede0; /* cream */
   letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
@@ -109,8 +109,8 @@ header {
 /* === Hero Section with Parallax === */
 .hero {
   height: 100vh;
-  background: url('school.png') no-repeat center center / cover;
-  background-attachment: fixed; /* Parallax */
+  background: url('images/school.png') no-repeat center center / cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,12 +122,9 @@ header {
 .hero::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(44, 14, 14, 0.65); /* darker maroon overlay for contrast */
-  backdrop-filter: blur(12px); /* stronger glass effect */
+  inset: 0;
+  background: rgba(44,14,14,0.65);
+  backdrop-filter: blur(15px); /* stronger glass effect */
   z-index: 1;
 }
 
@@ -145,20 +142,37 @@ header {
   font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: 2px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .hero-content p {
   font-size: 1.4rem;
   margin-bottom: 20px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .hero-content .quote {
   font-style: italic;
   font-size: 1.6rem;
-  color: #d4b59c; /* softer beige for quote */
+  color: #d4b59c;
   margin-bottom: 20px;
+}
+
+/* === Hero Animation Zoom === */
+@keyframes bgZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  z-index: 0;
+  animation: bgZoom 15s ease-in-out infinite alternate;
 }
 
 /* === Sections === */
@@ -168,6 +182,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   opacity: 0;
+  transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -204,7 +219,7 @@ header {
 /* === Buttons === */
 .btn {
   display: inline-block;
-  background: #6a1b1b; /* maroon */
+  background: #6a1b1b;
   color: #f5ede0;
   padding: 14px 30px;
   border-radius: 50px;
@@ -213,23 +228,23 @@ header {
   font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .btn:hover {
-  background: #8b2c2c; /* lighter maroon */
+  background: #8b2c2c;
   transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
 .btn-secondary {
-  background: rgba(44, 14, 14, 0.85); /* glassy maroon */
+  background: rgba(44,14,14,0.85);
   backdrop-filter: blur(8px);
 }
 
 /* === Features Section === */
 #features {
-  background: #f1e8df; /* slightly darker beige */
+  background: #f1e8df;
 }
 
 /* === Footer === */
@@ -255,31 +270,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* === Animations === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bgZoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-.hero {
-  animation: bgZoom 10s ease-in-out infinite alternate;
-}
-
 /* === Responsive === */
 @media (max-width: 768px) {
   .navbar {
@@ -299,11 +289,11 @@ footer a:hover {
   }
 
   .logo {
-    height: 35px;
+    height: 30px;
   }
 
   .hero-content h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 
   .hero-content p {
@@ -325,7 +315,7 @@ footer a:hover {
   }
 
   .logo {
-    height: 30px;
+    height: 28px;
   }
 
   .hero-content h2 {
