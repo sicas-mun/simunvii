@@ -79,7 +79,87 @@ header {
   color: #d4b59c;
 }
 
-/* === Hero Section === */
+
+/* === Sections === */
+.section {
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  color: #2c0e0e;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #4a2a2a;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+}
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .dates {
+    font-size: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
 /* === Hero Section === */
 .hero {
   height: 100vh;
@@ -197,100 +277,3 @@ header {
   }
 }
 
-/* === Sections === */
-.section {
-  padding: 100px 5%;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2.2rem;
-  color: #2c0e0e;
-  margin-bottom: 20px;
-}
-
-.section p {
-  font-size: 1.1rem;
-  color: #4a2a2a;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* === Buttons === */
-.btn {
-  display: inline-block;
-  background: #6a1b1b;
-  color: #fdf8f2;
-  padding: 12px 28px;
-  border-radius: 40px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #8b2c2c;
-  transform: scale(1.05);
-}
-
-/* === Footer === */
-footer {
-  background: #2c0e0e;
-  color: #f5ede0;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-footer a {
-  color: #d4b59c;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero .dates {
-    font-size: 1rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .site-title {
-    font-size: 1.4rem;
-  }
-
-  .logo {
-    height: 35px;
-  }
-
-  .nav-links {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero .dates {
-    font-size: 0.9rem;
-  }
-
-  .hero p {
-    font-size: 0.85rem;
-  }
-
-  .logo {
-    height: 30px;
-  }
-}
