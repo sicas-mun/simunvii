@@ -51,3 +51,10 @@ hero.addEventListener('mousemove', (e) => {
 hero.addEventListener('mouseleave', () => {
   hero.style.transform = 'translate(0, 0)';
 });
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('open');
+});
