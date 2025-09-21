@@ -9,19 +9,21 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #fdfaf6; /* light cream text */
-  background-color: #2c0e0e; /* deep maroon base */
+  color: #2c0e0e; /* dark maroon text for light areas */
+  background-color: #f8f3ed; /* light beige background */
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* === Header === */
+/* === Header & Navbar === */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(44, 14, 14, 0.8);
+  background: rgba(44, 14, 14, 0.85); /* maroon glassy */
   backdrop-filter: blur(10px);
   z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
@@ -45,10 +47,10 @@ header {
 .logo-container h1 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #f5ede0; /* light cream beige */
+  color: #f5ede0; /* beige */
+  letter-spacing: 1px;
 }
 
-/* === Nav Links === */
 .nav-links {
   list-style: none;
   display: flex;
@@ -63,14 +65,14 @@ header {
 }
 
 .nav-links a:hover {
-  color: #d4b59c; /* beige hover */
+  color: #d4b59c; /* softer beige */
 }
 
 /* === Hero Section with Parallax === */
 .hero {
   height: 100vh;
   background: url('school.png') no-repeat center center / cover;
-  background-attachment: fixed; /* Parallax effect */
+  background-attachment: fixed; /* Parallax */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +84,7 @@ header {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(44, 14, 14, 0.65); /* dark glass overlay */
+  background: rgba(44, 14, 14, 0.55); /* dark glass overlay */
   backdrop-filter: blur(5px);
 }
 
@@ -90,66 +92,117 @@ header {
   position: relative;
   z-index: 2;
   color: #f5ede0;
+  max-width: 700px;
 }
 
 .hero-content h2 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .hero-content p {
-  font-size: 1.3rem;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
 
 /* === Sections === */
-section {
+.section {
   padding: 80px 10%;
-  background: #3d1616; /* deep maroon for contrast */
+  text-align: center;
 }
 
-section:nth-child(even) {
-  background: #2c0e0e; /* alternate */
-}
-
-section h2 {
+.section h2 {
   font-size: 2rem;
-  color: #f5ede0;
+  color: #2c0e0e;
   margin-bottom: 20px;
-  text-align: center;
+  position: relative;
 }
 
-section p {
-  color: #e6d5c3; /* lighter beige for text */
-  text-align: center;
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #6a1b1b;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.section p {
+  color: #4a2a2a;
   max-width: 700px;
   margin: auto;
 }
 
+/* Alternate section background */
+#features {
+  background: #f1e8df; /* slightly darker beige */
+}
+
 /* === Buttons === */
-button, .btn {
+.btn {
+  display: inline-block;
   background: #6a1b1b;
   color: #f5ede0;
-  border: none;
   padding: 12px 25px;
   border-radius: 30px;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-button:hover, .btn:hover {
+.btn:hover {
   background: #8b2c2c;
   transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* === Footer === */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.4s; }
 
 /* === Responsive === */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     gap: 15px;
+    padding: 15px 20px;
   }
 
   .nav-links {
@@ -159,5 +212,9 @@ button:hover, .btn:hover {
 
   .hero-content h2 {
     font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 }
