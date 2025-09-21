@@ -139,31 +139,16 @@ header {
   font-size: 1.2rem;
 }
 
-.register-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .register-buttons a {
   display: inline-block;
-  background: #6a1b1b; /* maroon background */
-  color: #fdf8f2;
+  background: #6a1b1b !important;
+  color: #fdf8f2 !important;
   padding: 12px 28px;
   border-radius: 40px;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: 0.3s;
 }
-
-.register-buttons a:hover {
-  background: #8b2c2c; /* slightly darker on hover */
-  transform: scale(1.05);
-}
-
-
 
 /* Responsive */
 @media (max-width: 1024px) {
