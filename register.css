@@ -144,79 +144,52 @@ header {
   font-size: 1.1rem;
 }
 
-/* === Register Section === */
-.register-container {
-  padding: 100px 5% 60px;
+/* Hero Section Buttons */
+.hero-buttons {
   display: flex;
   justify-content: center;
-}
-
-.register-form {
-  background: #fff;
-  padding: 2.5rem 2rem;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  max-width: 500px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   gap: 20px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  flex-wrap: wrap;
+  margin-top: 25px;
 }
 
-.register-form:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.18);
-}
-
-.register-form h3 {
-  color: #2c0e0e;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.register-form label {
-  font-weight: 600;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.register-form input,
-.register-form select {
-  width: 100%;
-  padding: 10px 15px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-.register-form input:focus,
-.register-form select:focus {
-  border-color: #6a1b1b;
-  box-shadow: 0 0 8px rgba(106,27,27,0.2);
-  outline: none;
-}
-
-.register-btn {
+.hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   background: #6a1b1b;
   color: #fdf8f2;
-  padding: 12px 28px;
+  padding: 14px 32px;
   border-radius: 40px;
   font-weight: 600;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
-  margin-top: 10px;
 }
 
-.register-btn:hover {
+.hero-buttons a:hover {
   background: #8b2c2c;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
 
 /* === Footer === */
 footer {
