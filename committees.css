@@ -372,13 +372,17 @@ footer {
   color: #f5ede0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* pushes items to bottom */
+  align-items: flex-end;
   padding: 20px 50px;
   flex-wrap: wrap;
   height: 250px;
-  width: 100%;
-  margin-top: auto; /* sticks footer at bottom */
+  width: 100vw;        /* full viewport width */
+  margin: 0;           /* remove any default gap */
   box-sizing: border-box;
+  position: relative;  /* stay inside normal flow */
+  bottom: 0;           /* stick at bottom */
+  left: 0;             /* flush to left */
+  right: 0;            /* flush to right */
 }
 
 /* Footer info bottom-left */
@@ -386,7 +390,7 @@ footer .footer-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start; /* text aligned left */
+  align-items: flex-start;
 }
 
 footer .footer-info p {
@@ -400,7 +404,6 @@ footer iframe {
   height: 200px;
   border-radius: 10px;
 }
-
 /* === Responsive === */
 @media (max-width: 1024px) {
   footer {
