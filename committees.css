@@ -366,29 +366,39 @@ footer {
   width: 100%;
   margin-top: auto; /* pushes footer to bottom */
 }
+/* Footer */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* pushes items to bottom */
+  padding: 20px 50px;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 100%;
+  margin-top: auto; /* sticks footer at bottom */
+  box-sizing: border-box;
+}
 
+/* Footer info bottom-left */
 footer .footer-info {
-  max-width: 50%;
   display: flex;
   flex-direction: column;
-   margin-top: auto;
+  justify-content: flex-end;
+  align-items: flex-start; /* text aligned left */
 }
 
 footer .footer-info p {
-  margin: 5px 0;
+  margin: 3px 0;
   font-size: 1rem;
-   margin-top: auto;
 }
 
 footer iframe {
   border: 0;
   width: 400px;
-  height: 250px;
+  height: 200px;
   border-radius: 10px;
-}
-footer a {
-  color: #d4b59c;
-  text-decoration: none;
 }
 
 /* === Responsive === */
