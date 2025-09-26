@@ -265,32 +265,3 @@ footer iframe {
 @media (max-width: 480px) {
   .register-form { padding: 2rem 1.5rem; }
 }
-/* Make sure hero is always visible */
-.hero {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-}
-
-/* Ensure footer shows on all screens */
-footer {
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
-/* Prevent nav or overlays from covering hero/footer */
-.nav-links {
-  z-index: 2000; /* only above page content, not entire page */
-}
-
-.hero::before {
-  pointer-events: none; /* don’t block clicks */
-}
