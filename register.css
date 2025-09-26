@@ -145,13 +145,17 @@ header {
 }
 
 /* Hero Section Buttons */
+/* Hero Section Buttons Fix */
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 25px;
+  position: relative; /* Add this */
+  z-index: 2;         /* Ensure it's above the overlay */
 }
+
 
 .hero-buttons a {
   display: inline-flex;
