@@ -14,34 +14,32 @@ body {
   overflow-x: hidden;
 }
 
-/* === Header === */
+/* === Header / Navbar === */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: rgba(44,14,14,0.85);
+  display: flex;
+  justify-content: center;
   z-index: 1000;
-  padding: 15px 5%;
+  padding: 20px 5%;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .navbar {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 15px;
-}
-
-.logo-container a {
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -54,17 +52,15 @@ header {
   font-weight: 700;
   font-size: 1.8rem;
   color: #f5ede0;
+  letter-spacing: 1px;
 }
 
-/* Nav Links */
+/* Navbar links */
 .nav-links {
   list-style: none;
-  display: flex;
+  display: flex; /* default desktop */
   gap: 25px;
-}
-
-.nav-links li {
-  display: inline-block;
+  margin-left: 50px;
 }
 
 .nav-links a {
@@ -77,6 +73,12 @@ header {
 
 .nav-links a:hover {
   color: #d4b59c;
+}
+
+.nav-ico {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }
 
 /* Hamburger */
