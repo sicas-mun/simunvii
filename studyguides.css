@@ -146,30 +146,6 @@ header {
 }
 
 /* === Guides Section === */
-
-/* Featured Fantasy UNSC card */
-.featured-card {
-  grid-column: 1 / -1; /* span entire row */
-  background: linear-gradient(135deg, #6a1b1b, #8b2c2c);
-  color: #fff;
-  text-align: center;
-}
-
-.featured-card h3 {
-  color: #fff;
-  font-size: 1.8rem;
-}
-
-.featured-card .download-btn {
-  background: #fff;
-  color: #6a1b1b;
-}
-
-.featured-card .download-btn:hover {
-  background: #f5ede0;
-  color: #8b2c2c;
-}
-
 .guides-container {
   padding: 100px 5% 60px;
   display: flex;
@@ -182,6 +158,11 @@ header {
   gap: 35px;
   width: 100%;
   max-width: 1100px;
+}
+
+/* Featured card spans whole row */
+.featured-card {
+  grid-column: 1 / -1;
 }
 
 .guide-card {
@@ -255,7 +236,6 @@ header {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
-
 
 /* === Footer === */
 footer {
