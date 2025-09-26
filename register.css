@@ -157,17 +157,15 @@ header {
 /* === Hero Section === */
 /* === Hero Section === */
 .hero {
-  min-height: 100vh; /* full screen hero */
-  width: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background: url('images/school.png') center center / cover no-repeat fixed;
-  padding-top: 120px; /* keep content below fixed navbar */
+  padding-top: 80px;
   position: relative;
 }
-
 
 .hero::before {
   content: '';
@@ -176,7 +174,6 @@ header {
   background: rgba(0,0,0,0.5);
   z-index: 1;
 }
-
 
 .hero-content {
   position: relative;
