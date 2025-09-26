@@ -112,7 +112,7 @@ header {
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
   }
   .nav-links {
     display: none;

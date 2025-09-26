@@ -117,10 +117,7 @@ header {
     display: flex;
   }
   .hamburger {
-    display: block;
-    cursor: pointer;
-    font-size: 2rem;
-    color: #f5ede0;
+    display: flex;
   }
   .navbar {
     flex-direction: column;
