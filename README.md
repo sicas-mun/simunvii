@@ -13,22 +13,16 @@ This project powers the official site for **SICAS Liberty Campus MUN conference,
 ```
 
 simunvii/
-│
 ├── index.html          # Homepage
 ├── committees.html     # Committees page
 ├── studyguides.html    # Study Guides page
 ├── register.html       # Registration page
-│
-├── css/
-│   ├── style.css       # Main styles
-│   ├── committees.css  # Committees page styles
-│   ├── register.css    # Registration page styles
-│
-├── js/
-│   └── script.js       # Navbar + interactivity
-│
+├── style.css       # Main styles
+├── committees.css  # Committees page styles
+├── studyguides.css   # Study Guides style
+├── register.css    # Registration page styles
+└── script.js       # Navbar + interactivity
 ├── images/             # Logos, backgrounds, committee banners
-│
 └── README.md           # Project documentation
 
 ````
