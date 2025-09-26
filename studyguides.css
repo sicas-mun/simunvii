@@ -70,8 +70,7 @@ header {
   transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover{
   color: #d4b59c;
 }
 
