@@ -160,16 +160,6 @@ header {
   font-size: 1.8rem;
 }
 
-.featured-card .download-btn {
-  background: #fff;
-  color: #6a1b1b;
-}
-
-.featured-card .download-btn:hover {
-  background: #f5ede0;
-  color: #8b2c2c;
-}
-
 .guides-container {
   padding: 100px 5% 60px;
   display: flex;
