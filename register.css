@@ -137,14 +137,16 @@ header {
 }
 
 /* === Hero Section === */
+/* === Hero Section === */
 .hero {
-  height: 70vh;
+  min-height: 100vh; /* full screen hero */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background: url('images/school.png') center center / cover no-repeat fixed;
-  padding-top: 80px;
+  padding-top: 120px; /* keep content below fixed navbar */
   position: relative;
 }
 
@@ -161,6 +163,7 @@ header {
   z-index: 2;
   color: #fff;
 }
+
 
 .hero h1 {
   font-size: 3.2rem;
@@ -224,6 +227,7 @@ header {
 }
 
 /* === Footer === */
+/* === Footer === */
 footer {
   background: #2c0e0e;
   color: #f5ede0;
@@ -234,7 +238,11 @@ footer {
   flex-wrap: wrap;
   min-height: 250px;
   position: relative;
+  z-index: 5; /* ensure above hero overlay */
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 
 footer .footer-info {
   max-width: 50%;
@@ -251,6 +259,7 @@ footer .footer-info p {
 footer iframe {
   border: 0;
   width: 400px;
+  max-width: 100%; /* responsive iframe */
   height: 250px;
   border-radius: 10px;
 }
