@@ -305,4 +305,82 @@ footer a {
 }
 
 
+/* === Hero Section Styling === */
+.hero {
+  background: url("images/hero-bg.jpg") center/cover fixed no-repeat;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  color: #fdf8f2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+/* === Register Buttons === */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-buttons .register-del,
+.hero-buttons .register-priv-del {
+  background: #6a1b1b;  /* maroon-red */
+  color: #fdf8f2;
+  padding: 14px 32px;
+  border-radius: 40px; /* oval */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .register-del:hover,
+.hero-buttons .register-priv-del:hover {
+  background: #8b2c2c; /* lighter maroon */
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive Buttons */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
 
