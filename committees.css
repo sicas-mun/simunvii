@@ -193,7 +193,6 @@ header {
   .hero p { font-size: 0.9rem; }
 }
 
-/* === Committees Section === */
 .committee-list {
   padding: 120px 5px 80px;
   display: flex;
@@ -202,9 +201,10 @@ header {
   gap: 40px;
 }
 
+/* Large top card wider */
 .committee-card.large-card {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px; /* increased from 1000px */
   background: #fff;
   padding: 2rem;
   border-radius: 15px;
@@ -212,17 +212,18 @@ header {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
+/* Grid section wider */
 .committee-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* was 280px */
+  gap: 25px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px; /* increased from 1000px */
 }
 
 .committee-card {
   background: #fff;
-  padding: 1.5rem;
+  padding: 1.8rem; /* slightly more padding */
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -237,19 +238,22 @@ header {
 .committee-card h2 {
   margin: 10px 0 5px;
   color: #2c0e0e;
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* bumped up slightly */
 }
 
 .committee-card p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #4a2a2a;
 }
 
+/* Logos still clean and centered */
 .committee-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 15px;
+  width: 80px; /* slightly bigger for better proportion */
+  height: auto;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .committee-card.large-card .committee-logo {
@@ -281,14 +285,7 @@ header {
   margin-top: 20px;
 }
 
-.committee-logo {
-  width: 60px;
-  height: auto;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 
 /* === Footer === */
