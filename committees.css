@@ -288,7 +288,7 @@ header {
 
 
 
-/* === Footer === */
+/* Footer */
 footer {
   background: #2c0e0e;
   color: #f5ede0;
@@ -320,14 +320,31 @@ footer iframe {
   border-radius: 10px;
 }
 
-/* Responsive footer */
-@media (max-width: 1024px) {
-  .nav-links { gap: 15px; }
-  .committee-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-  footer { flex-direction: column; align-items: center; gap: 30px; }
-  footer .footer-info { max-width: 100%; }
-  footer iframe { width: 100%; height: 200px; }
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
 }
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  footer .footer-info {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  footer iframe {
+    width: 100%;
+    height: 200px;
+  }
+}
+
 
 /* === Popup Modal === */
 .modal-overlay {
