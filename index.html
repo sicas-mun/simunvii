@@ -81,5 +81,19 @@
 
   <!-- JS -->
   <script src="script.js"></script>
+
+  <script>
+  window.addEventListener("scroll", () => {
+    const heroBg = document.querySelector(".hero::before");
+  });
+
+  // Fallback since we can't directly select ::before
+  const hero = document.querySelector(".hero");
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    hero.style.setProperty("--parallax-offset", scrollY * 0.4 + "px");
+  });
+</script>
+
 </body>
 </html>
