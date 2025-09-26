@@ -80,17 +80,15 @@ header {
   object-fit: contain;
 }
 
-/* === Hamburger (Homepage style) === */
+/* Hamburger */
 .hamburger {
   display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #f5ede0;
-  z-index: 1500;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
   height: 20px;
+  cursor: pointer;
+  z-index: 1500;
 }
 
 .hamburger span {
