@@ -1,110 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fdf8f2;
-  color: #2c0e0e;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-/* === Header === */
-/* === Header === */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(44,14,14,0.85); 
-  z-index: 1000;
-  padding: 15px 5%;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo-container a {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-  cursor: pointer;
-}
-
-.site-title {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #f5ede0;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links li {
-  display: inline-block;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #f5ede0;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #d4b59c;
-}
-
-/* Responsive navbar */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .site-title { font-size: 1.4rem; }
-  .logo { height: 45px; }
-}
-
-.nav-ico {
-  width: 25px;
-  height: 25px;
-  object-fit: contain;
-}
-
-/* Hero Section */
+/* === HERO SECTION === */
 .hero {
   height: 80vh;
   display: flex;
@@ -121,10 +15,10 @@ header {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  z-index: 1;  /* <- this is causing the overlay to block clicks */
+  z-index: 1;
 }
 
-.hero h1, .hero p {
+.hero-content {
   position: relative;
   z-index: 2;
   color: #fff;
@@ -132,75 +26,81 @@ header {
 
 .hero h1 {
   font-size: 4rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.2rem;
+  margin-bottom: 20px;
 }
-.hero-content {
-  position: relative;
-  z-index: 2; /* higher than the ::before overlay */
+
+/* Buttons */
+.register-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .register-buttons a {
   display: inline-block;
-  background: #6a1b1b !important;
-  color: #fdf8f2 !important;
+  background: #6a1b1b;
+  color: #fdf8f2;
   padding: 12px 28px;
   border-radius: 40px;
   font-weight: 600;
-  text-decoration: none !important;
+  text-decoration: none;
   transition: 0.3s;
-}
-/* Footer */
-footer {
-  background: #2c0e0e;
-  color: #f5ede0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 50px;
-  flex-wrap: wrap;
-  min-height: 250px;
-  position: relative;
-}
-
-footer .footer-info {
-  max-width: 50%;
-  display: flex;
-  flex-direction: column;
-  margin-top: auto;
-}
-
-footer .footer-info p {
-  margin: 5px 0;
   font-size: 1rem;
 }
 
-footer iframe {
-  border: 0;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
+.register-buttons a:hover {
+  background: #8c2c2c;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .nav-links { gap: 15px; }
-  .committee-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-  footer { flex-direction: column; align-items: center; gap: 30px; }
-  footer .footer-info { max-width: 100%; }
-  footer iframe { width: 100%; height: 200px; }
-}
-
+/* RESPONSIVE HERO */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 3rem; }
-  .hero p { font-size: 1rem; }
+  .hero {
+    height: auto;
+    padding: 100px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .register-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .register-buttons a {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
 }
 
 @media (max-width: 480px) {
-  .committee-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 0.9rem; }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .register-buttons a {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
 }

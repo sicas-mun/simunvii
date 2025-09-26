@@ -7,38 +7,79 @@
   <link rel="stylesheet" href="committees.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-<nav class="navbar">
-  <div class="logo-container">
-    <a href="index.html">
-      <img src="images/sicas-logo.png" alt="SICAS Logo" class="logo">
-    </a>
-    <a href="index.html" class="site-title">SIMUN VII</a>
-  </div>
-  <ul class="nav-links">
-    <li>
-      <a href="https://www.instagram.com/simunvii._/" target="_blank">
-        <img src="images/instagram-logo.png" alt="Instagram" class="nav-ico">
-      </a>
-    </li>
-    <li><a href="committees.html" class="active">Committees</a></li>
-    <li><a href="studyguides.html">Study Guides</a></li>
-    <li><a href="register.html">Register Now</a></li>
-  </ul>
-</nav>
-
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="images/sicas-logo.png" alt="SICAS Logo" class="logo">
+        </a>
+        <a href="index.html" class="site-title">SIMUN VII</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        &#9776;
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a href="https://www.instagram.com/simunvii._/" target="_blank">
+            <img src="images/instagram-logo.png" alt="Instagram" class="nav-ico">
+          </a>
+        </li>
+        <li><a href="committees.html">Committees</a></li>
+        <li><a href="studyguides.html" class="active">Study Guides</a></li>
+        <li><a href="register.html">Register Now</a></li>
+      </ul>
+    </nav>
   </header>
 
-
   <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Study Guides</h1>
-    <p>Unlock the key to effective research and access the background to each committee and agenda</p>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Study Guides</h1>
+      <p>Download the official study guides for each committee at SIMUN VII</p>
+    </div>
+  </section>
 
-  
+  <!-- Study Guide Cards -->
+  <section class="guides-container">
+    <div class="guides-grid">
+      <div class="guide-card">
+        <h3>ADHOC</h3>
+        <a href="studyguides/adhoc.pdf" class="download-btn" download>Download PDF</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>DISEC</h3>
+        <a href="studyguides/disec.pdf" class="download-btn" download>Download PDF</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>Manhattan Engineer District</h3>
+        <a href="studyguides/manhattan.pdf" class="download-btn" download>Download PDF</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>UNSC</h3>
+        <a href="studyguides/unsc.pdf" class="download-btn" download>Download PDF</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>SOCHUM</h3>
+        <a href="studyguides/sochum.pdf" class="download-btn" download>Download PDF</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>PNA</h3>
+        <a href="studyguides/pna.pdf" class="download-btn" download>Download PDF</a>
+      </div>
+
+      <div class="guide-card">
+        <h3>Fantasy UNSC</h3>
+        <a href="studyguides/fantasy-unsc.pdf" class="download-btn" download>Download PDF</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <div class="footer-info">
@@ -48,5 +89,15 @@
     </div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13605.600685320524!2d74.31897045076023!3d31.513167369253164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045e6a53688f%3A0xede2774b0019b449!2sSICAS%20Liberty%20Complex%20SLC!5e0!3m2!1sen!2s!4v1758469439883!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </footer>
+
+  <!-- JS for hamburger toggle -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
