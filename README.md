@@ -1,8 +1,3 @@
-Perfect 👍 Here’s a **ready-to-use README.md** for your repo with your actual GitHub repo link and live site link already included. You can just copy-paste it into your `README.md` file:
-
----
-
-```markdown
 # 🌍 SIMUN VII Official Website
 
 Welcome to the **SIMUN VII (SICAS Model United Nations 2025) website repository**.  
