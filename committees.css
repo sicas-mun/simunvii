@@ -79,24 +79,24 @@ header {
   color: #d4b59c;
 }
 
-/* Hamburger */
+/* === Hamburger (Homepage style) === */
 .hamburger {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
+  font-size: 2rem;
   cursor: pointer;
+  color: #f5ede0;
   z-index: 1500;
 }
 
+/* Hamburger spans animation (only needed if you want the X animation) */
 .hamburger span {
   display: block;
   height: 3px;
-  width: 100%;
+  width: 25px;
   background: #f5ede0;
+  margin: 5px 0;
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -108,6 +108,7 @@ header {
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
 
 /* Responsive Navbar */
 @media (max-width: 768px) {

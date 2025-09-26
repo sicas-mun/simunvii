@@ -51,10 +51,15 @@ header {
   color: #f5ede0;
 }
 
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
+}
+
+.nav-links li {
+  display: inline-block;
 }
 
 .nav-links a {
@@ -65,7 +70,8 @@ header {
   transition: 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #d4b59c;
 }
 
@@ -75,15 +81,17 @@ header {
   object-fit: contain;
 }
 
-/* Hamburger */
+/* === Hamburger (Homepage style) === */
 .hamburger {
   display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f5ede0;
+  z-index: 1500;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
   height: 20px;
-  cursor: pointer;
-  z-index: 1500;
 }
 
 .hamburger span {
@@ -105,20 +113,31 @@ header {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Responsive Navbar */
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     gap: 15px;
     text-align: center;
     margin-top: 10px;
+    width: 100%;
+    background: rgba(44,14,14,0.95);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 20px;
+    border-radius: 10px;
   }
+
   .nav-links.show {
     display: flex;
   }
-  .hamburger {
-    display: flex;
-  }
+
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -166,7 +185,6 @@ header {
   font-size: 1.1rem;
 }
 
-/* Hero Section Buttons */
 /* Hero Section Buttons Fix */
 .hero-buttons {
   display: flex;
@@ -174,10 +192,9 @@ header {
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 25px;
-  position: relative; /* Add this */
-  z-index: 2;         /* Ensure it's above the overlay */
+  position: relative; /* Ensure buttons are above overlay */
+  z-index: 2;
 }
-
 
 .hero-buttons a {
   display: inline-flex;
@@ -200,22 +217,27 @@ header {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* Responsive */
+/* Responsive Hero */
 @media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero p { font-size: 1rem; }
   .hero-buttons {
     flex-direction: column;
     gap: 15px;
   }
-
   .hero-buttons a {
     width: 100%;
     max-width: 280px;
-    margin: 0 auto;
     font-size: 1rem;
     padding: 12px 25px;
   }
 }
 
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 0.9rem; }
+  .hero-buttons a { font-size: 0.9rem; padding: 10px 18px; }
+}
 
 /* === Footer === */
 footer {
