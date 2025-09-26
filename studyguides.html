@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Guides | SIMUN VII</title>
-  <link rel="stylesheet" href="committees.css">
+  <link rel="stylesheet" href="studyguides.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
@@ -16,9 +19,7 @@
         </a>
         <a href="index.html" class="site-title">SIMUN VII</a>
       </div>
-      <div class="hamburger" id="hamburger">
-        &#9776;
-      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
       <ul class="nav-links" id="nav-links">
         <li>
           <a href="https://www.instagram.com/simunvii._/" target="_blank">
@@ -45,37 +46,51 @@
     <div class="guides-grid">
       <div class="guide-card">
         <h3>ADHOC</h3>
-        <a href="studyguides/adhoc.pdf" class="download-btn" download>Download PDF</a>
+        <a href="studyguides/adhoc.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
 
       <div class="guide-card">
         <h3>DISEC</h3>
-        <a href="studyguides/disec.pdf" class="download-btn" download>Download PDF</a>
+        <a href="studyguides/disec.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
 
       <div class="guide-card">
         <h3>Manhattan Engineer District</h3>
-        <a href="studyguides/manhattan.pdf" class="download-btn" download>Download PDF</a>
+        <a href="studyguides/manhattan.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
 
       <div class="guide-card">
         <h3>UNSC</h3>
-        <a href="studyguides/unsc.pdf" class="download-btn" download>Download PDF</a>
+        <a href="studyguides/unsc.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
 
       <div class="guide-card">
         <h3>SOCHUM</h3>
-        <a href="studyguides/sochum.pdf" class="download-btn" download>Download PDF</a>
+        <a href="studyguides/sochum.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
 
       <div class="guide-card">
         <h3>PNA</h3>
-        <a href="studyguides/pna.pdf" class="download-btn" download>Download PDF</a>
+        <a href="studyguides/pna.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
 
       <div class="guide-card">
         <h3>Fantasy UNSC</h3>
-        <a href="studyguides/fantasy-unsc.pdf" class="download-btn" download>Download PDF</a>
+        <a href="studyguides/fantasy-unsc.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
     </div>
   </section>
@@ -97,6 +112,13 @@
 
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+    });
+
+    // Close menu when clicking a link (mobile)
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
     });
   </script>
 </body>
