@@ -354,7 +354,6 @@ header {
   color: #fff;
   transform: scale(1.1);
 }
-/* Footer */
 footer {
   background: #2c0e0e;
   color: #f5ede0;
@@ -364,14 +363,14 @@ footer {
   padding: 20px 50px;
   flex-wrap: wrap;
   min-height: 250px;
-  position: relative;
+  width: 100%;
+  margin-top: auto; /* pushes footer to bottom */
 }
 
 footer .footer-info {
   max-width: 50%;
   display: flex;
   flex-direction: column;
-  margin-top: auto;
 }
 
 footer .footer-info p {
@@ -385,7 +384,6 @@ footer iframe {
   height: 250px;
   border-radius: 10px;
 }
-
 footer a {
   color: #d4b59c;
   text-decoration: none;
