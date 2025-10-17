@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -349,18 +351,36 @@ header {
   color: #fff;
   transform: scale(1.1);
 }
+/* === Footer Fix (No white gaps on sides or bottom) === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fdf8f2;
+  overflow-x: hidden;
+}
 
-/* Footer */
 footer {
   background: #2c0e0e;
   color: #f5ede0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px 50px;
+  padding: 30px 60px;
   flex-wrap: wrap;
-  min-height: 250px;
+  width: 100%;
   position: relative;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+footer * {
+  box-sizing: border-box;
 }
 
 footer .footer-info {
@@ -376,24 +396,19 @@ footer .footer-info p {
 }
 
 footer iframe {
-  border: 0;
+  border: none;
   width: 400px;
   height: 250px;
   border-radius: 10px;
 }
 
-footer a {
-  color: #d4b59c;
-  text-decoration: none;
-}
-
-/* === Responsive === */
+/* Ensure full width on smaller screens */
 @media (max-width: 1024px) {
   footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    padding: 30px 20px;
   }
 
   footer .footer-info {
@@ -403,6 +418,6 @@ footer a {
 
   footer iframe {
     width: 100%;
-    height: 200px;
+    height: 220px;
   }
 }
