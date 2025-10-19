@@ -1,4 +1,6 @@
-/* General Reset */
+/* === Fonts & Base === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,43 +8,154 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #fdf8f2;
   color: #2c0e0e;
-  line-height: 1.7;
+  line-height: 1.5;
   overflow-x: hidden;
 }
 
-/* Navbar (same as main site) */
-nav {
+/* === Header / Navbar === */
+header {
+  position: fixed;
+  top: 0;
   width: 100%;
-  background-color: #6a1b1b;
-  color: #fdf8f2;
+  background: rgba(44,14,14,0.85);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 60px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-nav a {
-  color: #fdf8f2;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 18px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #e5c7b5;
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: 700;
+  height: 50px;
+  width: auto;
+  cursor: pointer;
 }
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #f5ede0;
+  letter-spacing: 1px;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex; /* default desktop */
+  gap: 25px;
+  margin-left: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f5ede0;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4b59c;
+}
+
+.nav-ico {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1500;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #f5ede0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === Sections === */
+.section {
+  padding: 40px 5%;
+  text-align: center;
+  background-color: #e7cfbc9c;
+}
+
+#committees {
+  padding-top: 60px;
+}
+
+#studyguides {
+  padding-bottom: 60px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 10px;
+}
+
+.btn-secondary {
+  margin-top: 15px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #8b2c2c;
+  transform: scale(1.05);
+}
+
 
 /* Committee Section */
 .committee-page {
@@ -239,4 +352,73 @@ footer a:hover {
 .btn:hover {
   background: #8b2c2c;
   transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #2c0e0e;
+  color: #f5ede0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+  min-height: 250px;
+  position: relative;
+}
+
+footer .footer-info {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+footer .footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+footer iframe {
+  border: 0;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+footer a {
+  color: #d4b59c;
+  text-decoration: none;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  footer .footer-info {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  footer iframe {
+    width: 100%;
+    height: 200px;
+  }
+}
+/* Animation */
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #countdown { gap: 20px; }
+  .time-box { width: 100px; padding: 20px; }
+  .time-box span { font-size: 2rem; }
 }
