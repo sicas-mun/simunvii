@@ -143,21 +143,40 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
+/* Maroon Explore Buttons (replaces arrow-btn style) */
 .arrow-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  color: #6a1b1b;
+  background: #6a1b1b;
+  color: #fdf8f2;
+  padding: 10px 26px;
+  border-radius: 35px;
   text-decoration: none;
   font-weight: 600;
-  margin-top: 10px;
-  transition: 0.3s;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  border: 2px solid transparent;
+}
+
+.arrow-btn i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
 }
 
 .arrow-btn:hover {
-  color: #8b2c2c;
+  background: #8b2c2c;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.arrow-btn:hover i {
   transform: translateX(5px);
 }
+
 
 /* Footer */
 footer {
