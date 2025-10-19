@@ -156,102 +156,45 @@ header {
   transform: scale(1.05);
 }
 
-/* === Hero Section with Ken Burns Effect === */
+/* === Hero Section === */
 .hero {
-  position: relative;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 10%;
+  background: url('images/school.png') center center / cover no-repeat fixed;
+  padding-top: 80px;
+  position: relative;
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('images/school.png') center center / cover no-repeat;
-  z-index: 0;
-  
-  /* Ken Burns animation */
-  animation: kenburns 20s ease-in-out infinite alternate;
-  transform-origin: center;
-}
-
-@keyframes kenburns {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  50% {
-    transform: scale(1.1) translate(-2%, -2%);
-  }
-  100% {
-    transform: scale(1.2) translate(2%, 2%);
-  }
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* overlay */
+  background: rgba(0,0,0,0.5);
   z-index: 1;
 }
-
 
 .hero-content {
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  transform: translateY(10%);
+  color: #fff;
 }
+
+
+
 
 .hero h1 {
-  font-size: 6rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
-  margin: 0;
-}
-
-.hero .dates {
-  font-size: 2.1rem;
-  font-weight: 500;
-  color: #ffffff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
-
-.hero .quote {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: rgba(255,255,255,0.85);
-  max-width: 500px;
+  font-size: 3.2rem;
+  margin-bottom: 15px;
 }
 
 
-.hero .btn {
-  margin-top: 20px;
-  background: #6a1b1b;
-  color: #fdf8f2;
-  padding: 14px 32px;
-  border-radius: 40px;
-  font-weight: 600;
+.hero p {
   font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
 }
 
-.hero .btn:hover {
-  background: #8b2c2c;
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
 
 /* Footer */
 footer {
