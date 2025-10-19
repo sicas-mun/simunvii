@@ -185,29 +185,44 @@ header {
   align-items: flex-start;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
+/* Individual PDF box */
 .pdf-box {
   background: #fff;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 520px;
+  flex: 1 1 48%;
+  max-width: 48%;
+  min-width: 300px;
 }
 
+/* Heading for each box */
 .pdf-box h2 {
   color: #6a1b1b;
   font-size: 1.3rem;
   margin-bottom: 15px;
 }
 
+/* Embedded PDF */
 .pdf-box iframe {
   width: 100%;
   height: 600px;
   border: none;
   border-radius: 10px;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .pdf-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
 
 /* Footer */
 footer {
